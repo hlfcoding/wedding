@@ -1,0 +1,16 @@
+{
+  "name": "wedding",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Responsive HTML5 mini-site from scratch. http://wedding.pengxwang.com",
+  "main": "index.html",
+  "author": "Peng Wang <peng@pengxwang.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hlfcoding/hlf-tumblr-log"
+  },
+  "scripts": {
+    "lib": "echo todo"
+  }
+}
