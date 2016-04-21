@@ -14,7 +14,6 @@
     "hlf-css": "^0.2.4"
   },
   "scripts": {
-    "hlf-css:dist": "cp node_modules/hlf-css/dist/scss/imports/* css/vendor",
-    "hlf-css:lib": "cp node_modules/hlf-css/lib/modified/{_normalize,html5-boilerplate/_{base,helpers,print}}.scss css/vendor"
+    "postinstall": "source bin/lib.sh"
   }
 }
