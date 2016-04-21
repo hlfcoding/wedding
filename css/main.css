@@ -1,0 +1,1061 @@
+/* normalize.css v2.1.0 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+[hidden] {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap; }
+
+/**
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222; }
+
+body {
+  font-size: 1em;
+  line-height: 1.4; }
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+img {
+  vertical-align: middle; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+textarea {
+  resize: vertical; }
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+* {
+  box-sizing: border-box; }
+
+.inline-block {
+  display: -moz-inline-stack;
+  display: inline-block; }
+
+#html .inline {
+  display: inline; }
+
+.hide {
+  display: none; }
+
+@font-face {
+  font-family: "DanteMT-Italic";
+  src: url("http://pengxwang.s3.amazonaws.com/wedding/fonts/dantemtitalic.eot");
+  src: url("http://pengxwang.s3.amazonaws.com/wedding/fonts/dantemtitalic.eot?#iefix") format("embedded-opentype"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/dantemtitalic.woff") format("woff"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/dantemtitalic.ttf") format("truetype"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/dantemtitalic.svg#file_name") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "CaslonTwoTwentyFourLT-Book";
+  src: url("http://pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbook.eot");
+  src: url("http://pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbook.eot?#iefix") format("embedded-opentype"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbook.woff") format("woff"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbook.ttf") format("truetype"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbook.svg#file_name") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "CaslonTwoTwentyFourLT-Bold";
+  src: url("http://pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbold.eot");
+  src: url("http://pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbold.eot?#iefix") format("embedded-opentype"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbold.woff") format("woff"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbold.ttf") format("truetype"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbold.svg#file_name") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "AJensonPro-Regular";
+  src: url("http://pengxwang.s3.amazonaws.com/wedding/fonts/ajensonproregular.eot");
+  src: url("http://pengxwang.s3.amazonaws.com/wedding/fonts/ajensonproregular.eot?#iefix") format("embedded-opentype"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/ajensonproregular.woff") format("woff"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/ajensonproregular.ttf") format("truetype"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/ajensonproregular.svg#file_name") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* ==============
+   Skin
+   ============== */
+/* ==============
+   Patterns
+   ============== */
+p, .and, article figcaption {
+  font-family: "DanteMT-Italic", serif;
+  font-weight: normal; }
+
+h1, h2, h3 {
+  font-family: "CaslonTwoTwentyFourLT-Book", serif;
+  font-variant: small-caps;
+  font-weight: normal; }
+
+#title.stalking, nav a, article a.action, .map .curtain figcaption, h4, h5, h6, label {
+  font-family: "AJensonPro-Regular", serif;
+  font-variant: small-caps;
+  font-weight: normal;
+  text-transform: lowercase;
+  letter-spacing: 1px; }
+  nav #title.stalking, nav a, nav article a.action, article nav a.action, nav .map .curtain figcaption, .map .curtain nav figcaption, nav h4, nav h5, nav h6, nav label {
+    letter-spacing: 0; }
+  #title.stalking .number, nav a .number, article a.action .number, .map .curtain figcaption .number, h4 .number, h5 .number, h6 .number, label .number, #title.stalking .meta, nav a .meta, article a.action .meta, .map .curtain figcaption .meta, h4 .meta, h5 .meta, h6 .meta, label .meta, #title.stalking small, nav a small, article a.action small, .map .curtain figcaption small, h4 small, h5 small, h6 small, label small {
+    font-size: 0.75em; }
+
+.meta, small {
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0.7;
+  text-transform: lowercase; }
+  .meta h1, small h1, .meta h2, small h2, .meta h3, small h3 {
+    font-size: 0.7em;
+    font-style: normal; }
+  .meta .meta, small .meta, .meta small, small small {
+    font-size: 1em; }
+  .selected.meta, small.selected {
+    opacity: 1; }
+
+.main address .directions, .main .more-js .trigger {
+  font-size: 0.9em;
+  opacity: 0.7; }
+
+em {
+  border-bottom-width: 1px;
+  border-bottom-style: dotted; }
+  p em, .and em, article figcaption em {
+    font-style: normal; }
+
+a:not(.action):not(.trigger):not(.cloaked), .main .more-js .trigger {
+  text-decoration: none; }
+  a:not(.action):not(.trigger):not(.cloaked), .main .more-js .trigger {
+    border-bottom-width: 1px;
+    border-bottom-style: dotted; }
+  #html a:hover:not(.action):not(.trigger):not(.cloaked), #html .main .more-js .trigger:hover, .main .more-js #html .trigger:hover {
+    border-bottom-style: solid; }
+  em a:not(.action):not(.trigger):not(.cloaked), em .main .more-js .trigger, .main .more-js em .trigger {
+    border-bottom-style: none; }
+
+h5, h6, .main aside .detail, .main aside .note, article figcaption, article .note {
+  font-size: 17px;
+  line-height: 1.5em;
+  padding: 4.5px 9px; }
+
+#title.stalking, nav a, article a.action, .map .curtain figcaption, h4, .main aside, article {
+  font-size: 19px; }
+
+#title.stalking, nav a, article a.action, .map .curtain figcaption {
+  padding: 17px 30px 15px; }
+  nav #title.stalking, nav a, nav article a.action, article nav a.action, nav .map .curtain figcaption, .map .curtain nav figcaption {
+    padding-left: 15px;
+    padding-right: 15px; }
+
+article blockquote {
+  font-size: 20px;
+  line-height: 26px;
+  padding: 39px; }
+
+.header-container,
+.footer-container,
+#html .main aside {
+  color: white;
+  background-color: #0067ac;
+  background-image: url(http://pengxwang.s3.amazonaws.com/wedding/img/wave-pattern-inverted.png);
+  background-attachment: fixed;
+  overflow: hidden; }
+  .header-container #title,
+  .footer-container #title,
+  #html .main aside #title, .header-container .main aside > .inner, .main .header-container aside > .inner,
+  .footer-container .main aside > .inner,
+  .main .footer-container aside > .inner,
+  #html .main aside > .inner, .header-container #colophon,
+  .footer-container #colophon,
+  #html .main aside #colophon {
+    background: rgba(0, 103, 172, 0.5);
+    -webkit-box-shadow: 0 0 50px 26px rgba(0, 103, 172, 0.5);
+    box-shadow: 0 0 50px 26px rgba(0, 103, 172, 0.5); }
+  .header-container a:not(.action):not(.trigger):not(.cloaked),
+  .footer-container a:not(.action):not(.trigger):not(.cloaked),
+  #html .main aside a:not(.action):not(.trigger):not(.cloaked), .header-container .main .more-js .trigger, .main .more-js .header-container .trigger,
+  .footer-container .main .more-js .trigger,
+  .main .more-js .footer-container .trigger,
+  #html .main aside .more-js .trigger,
+  #html .main .more-js aside .trigger {
+    color: white;
+    border-bottom-color: white; }
+    .header-container a[href^='tel']:not(.action):not(.trigger):not(.cloaked),
+    .footer-container a[href^='tel']:not(.action):not(.trigger):not(.cloaked),
+    #html .main aside a[href^='tel']:not(.action):not(.trigger):not(.cloaked), .header-container .main .more-js [href^='tel'].trigger, .main .more-js .header-container [href^='tel'].trigger,
+    .footer-container .main .more-js [href^='tel'].trigger,
+    .main .more-js .footer-container [href^='tel'].trigger,
+    #html .main aside .more-js [href^='tel'].trigger,
+    #html .main .more-js aside [href^='tel'].trigger, .header-container a.native-bridge:not(.action):not(.trigger):not(.cloaked),
+    .footer-container a.native-bridge:not(.action):not(.trigger):not(.cloaked),
+    #html .main aside a.native-bridge:not(.action):not(.trigger):not(.cloaked), .header-container .main .more-js .native-bridge.trigger, .main .more-js .header-container .native-bridge.trigger,
+    .footer-container .main .more-js .native-bridge.trigger,
+    .main .more-js .footer-container .native-bridge.trigger,
+    #html .main aside .more-js .native-bridge.trigger,
+    #html .main .more-js aside .native-bridge.trigger {
+      border-bottom-color: #56a0d3; }
+  .header-container em,
+  .footer-container em,
+  #html .main aside em {
+    border-color: white; }
+
+body, .main-container {
+  color: #231f20;
+  background-color: white;
+  background-image: url(http://pengxwang.s3.amazonaws.com/wedding/img/linen-pattern.png);
+  /* For Caslon.
+  h1, h2, h3 {
+    // Black on white.
+    font-weight: bold;
+  }
+  */ }
+  body a:not(.action):not(.trigger):not(.cloaked), .main-container a:not(.action):not(.trigger):not(.cloaked), body .main .more-js .trigger, .main .more-js body .trigger, .main-container .main .more-js .trigger, .main .more-js .main-container .trigger {
+    color: #0067ac;
+    border-bottom-color: #0067ac; }
+    body a[href^='tel:']:not(.action):not(.trigger):not(.cloaked), .main-container a[href^='tel:']:not(.action):not(.trigger):not(.cloaked), body .main .more-js [href^='tel:'].trigger, .main .more-js body [href^='tel:'].trigger, .main-container .main .more-js [href^='tel:'].trigger, .main .more-js .main-container [href^='tel:'].trigger {
+      color: white;
+      border-bottom-color: white; }
+  body em, .main-container em {
+    border-color: #231f20; }
+
+article figure, article blockquote {
+  color: white;
+  background-color: #4d4c48;
+  background-image: url(http://pengxwang.s3.amazonaws.com/wedding/img/dark-linen-pattern.png); }
+
+article .note {
+  color: #004879;
+  background-color: rgba(86, 160, 211, 0.5); }
+
+.main aside .detail, .main aside .note {
+  color: #cce2f1;
+  background-color: rgba(0, 71, 140, 0.5); }
+  .main aside .detail em, .main aside .note em {
+    color: white; }
+
+article .note, .main aside .detail, .main aside .note, #title.stalking, nav a, article a.action, .map .curtain figcaption, .main aside, article figure, article blockquote, .map iframe, .map .curtain {
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2); }
+
+.header-container,
+.footer-container,
+#html .main aside, .main aside .detail, .main aside .note, #title.stalking, nav a, article a.action, .map .curtain figcaption {
+  text-shadow: 0 -1px 0 #231f20; }
+
+article .note, .main-container p, .main-container dl, .main-container ul, .main-container ol {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
+
+#title.stalking, nav a, article a.action, .map .curtain figcaption {
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  -ms-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  background: rgba(0, 103, 172, 0.7);
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase; }
+  #title.stalking:hover, nav a:hover, article a.action:hover, .map .curtain figcaption:hover {
+    color: white;
+    background: #00478c; }
+
+.header-container .title, .main aside, article .note {
+  padding: 26px; }
+  .header-container .title :first-child, .main aside :first-child, article .note :first-child {
+    margin-top: 0; }
+  .header-container .title :last-child, .main aside :last-child, article .note :last-child {
+    margin-bottom: 0; }
+
+.main aside .detail, .main aside .note {
+  padding: 13px; }
+
+article dl dd, article dl dt {
+  vertical-align: middle; }
+article dl dt {
+  float: left;
+  padding-right: 18px;
+  margin: 0;
+  clear: left; }
+article dl dd {
+  display: block;
+  clear: right; }
+
+article > :not(:first-child) .heading {
+  -webkit-box-shadow: inset 0 2px 0 -1px white;
+  box-shadow: inset 0 2px 0 -1px white;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding-top: 26px; }
+
+#title.stalking, nav a {
+  margin-top: -1px; }
+  article #title.stalking.note, nav article a.note, article nav a.note, .main aside #title.stalking.detail, .main aside #title.stalking.note, nav .main aside a.detail, .main aside nav a.detail, nav .main aside a.note, .main aside nav a.note, #title.stalking, nav a, article a.action#title.stalking, article nav a.action, nav article a.action, .map .curtain figcaption#title.stalking, nav a#title.stalking, .main aside#title.stalking, article figure#title.stalking, article blockquote#title.stalking, .map iframe#title.stalking, .map #title.stalking.curtain, nav .map a.curtain, .map nav a.curtain {
+    margin-top: -2px; }
+
+.map {
+  display: block;
+  position: relative; }
+  .map > * {
+    display: block;
+    position: absolute; }
+
+/* ==============
+   General
+   ============== */
+body {
+  font: 18px/26px "DanteMT-Italic", serif;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0; }
+  body.ready {
+    opacity: 1; }
+
+.space {
+  font-family: Georgia, serif;
+  line-height: 1; }
+
+label[for], label[for] * {
+  cursor: pointer; }
+
+fieldset.radio > label:not(:first-child) {
+  padding-left: 0.5em;
+  border-left: 1px dotted white; }
+fieldset.radio > label:not(:last-child) {
+  padding-right: 0.5em; }
+
+img[src=''] {
+  display: none; }
+
+::-moz-selection {
+  background: transparent; }
+  .main-container ::-moz-selection {
+    background: #cce2f1; }
+
+::selection {
+  background: transparent; }
+  .main-container ::selection {
+    background: #cce2f1; }
+
+.wrapper {
+  width: 90%;
+  margin: 0 5%;
+  position: relative; }
+  @media only screen and (min-width: 1140px) {
+    .wrapper {
+      width: 1026px;
+      margin: 0 auto; } }
+
+[data-lang] {
+  display: none; }
+
+[data-lang^='zh'] {
+  font-size: 0.95em;
+  line-height: 1em; }
+  .action [data-lang^='zh'], .trigger [data-lang^='zh'], .stalking [data-lang^='zh'] {
+    font-size: 1.15em; }
+  [data-lang^='zh'] .and {
+    font-size: 1em; }
+
+.header-container {
+  border-bottom: 8px solid #0067ac;
+  overflow: visible; }
+  .header-container .title {
+    padding: 39px 0 18px; }
+    .header-container .title .heading {
+      margin: 0; }
+    @media only screen and (min-width: 1024px) {
+      .header-container .title {
+        float: left; } }
+    .ie7 .header-container .title {
+      padding-top: 26px; }
+  @media print {
+    .header-container {
+      border-bottom: 0; } }
+
+.footer-container,
+.main aside {
+  border-top: 8px solid #0067ac; }
+  @media print {
+    .footer-container,
+    .main aside {
+      border-top: 0; } }
+
+.header-container,
+.footer-container {
+  cursor: default; }
+
+.main-container {
+  -webkit-box-shadow: inset 0 4px 3px -3px rgba(0, 0, 0, 0.7), inset 0 -4px 3px -3px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0 4px 3px -3px rgba(0, 0, 0, 0.7), inset 0 -4px 3px -3px rgba(0, 0, 0, 0.7);
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #56a0d3; }
+  .main-container article .heading {
+    color: #4f4b4c;
+    font-family: "CaslonTwoTwentyFourLT-Bold", serif; }
+
+.main aside:first-of-type {
+  margin-top: 26px; }
+
+/* ==============
+   Header
+   ============== */
+#title {
+  font-size: 42px; }
+  #title.stalking {
+    width: auto !important; }
+    @media only screen and (min-width: 480px) and (max-width: 1024px) {
+      #title.stalking {
+        display: none; } }
+
+#i18n {
+  bottom: 18px;
+  position: absolute;
+  right: 0; }
+  @media only screen and (max-width: 1024px) {
+    #i18n {
+      bottom: auto;
+      top: 47px; } }
+  @media only screen and (max-width: 640px) {
+    #i18n {
+      left: 0;
+      right: auto;
+      top: 5px;
+      font-size: 0.8em; } }
+  @media print {
+    #i18n {
+      display: none; } }
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+nav li, nav a {
+  display: block; }
+nav a {
+  margin-bottom: 10px; }
+  @media only screen and (min-width: 480px) {
+    nav a {
+      float: left;
+      width: 31%;
+      margin-left: 1.7%;
+      margin-right: 1.7%;
+      margin-bottom: 0; }
+      .oldie nav nav a {
+        margin: 0 0.7%; } }
+nav.more-js .trigger {
+  display: none;
+  position: absolute;
+  top: 26px;
+  right: 26px; }
+  @media only screen and (max-width: 480px) {
+    nav.more-js .trigger {
+      display: block; } }
+@media only screen and (min-width: 480px) {
+  nav li:first-child > a {
+    margin-left: 0; }
+  nav li:last-child > a {
+    margin-right: 0; }
+  .lt-ie8 nav li {
+    display: inline; } }
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  nav:not(.stalking) {
+    height: 60px;
+    padding-top: 4px;
+    overflow-y: hidden; } }
+@media only screen and (min-width: 1024px) {
+  nav {
+    float: right;
+    width: 37%; } }
+@media print {
+  nav {
+    display: none; } }
+
+/* ==============
+   Main
+   ============== */
+a.cloaked {
+  color: inherit;
+  text-decoration: inherit; }
+
+.main {
+  padding: 26px 0; }
+  .main aside :not(.note):not(em) {
+    font-style: normal; }
+  @media only screen and (min-width: 1024px) {
+    .main aside {
+      float: right;
+      width: 37%; } }
+  @media print {
+    .main aside {
+      border-top: 1px solid;
+      border: 0;
+      margin-top: 1em;
+      margin: 0;
+      padding-top: 1em;
+      padding: 0; } }
+  .main address .directions {
+    display: block;
+    margin: 0.5em 0; }
+  .main h1, .main h2, .main h3 {
+    text-transform: lowercase; }
+  .main p, .main h1, .main h2, .main h3, .main blockquote, .main figure {
+    margin: 26px 0; }
+  @media only screen and (min-width: 1024px) {
+    .main article {
+      float: left;
+      width: 57%; } }
+
+article figure {
+  display: block; }
+  article figure img {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    width: 100%; }
+  @media print {
+    article figure {
+      display: none; } }
+article figcaption {
+  text-transform: lowercase;
+  display: block;
+  text-align: right; }
+article dl dt {
+  width: 25%; }
+  @media only screen and (max-width: 480px) {
+    article dl dt .extra {
+      display: none; } }
+article dl dd {
+  margin-left: 25%; }
+article dl small:not(.extra) {
+  display: block;
+  line-height: 1.3em; }
+article dl.large dd + dd {
+  margin-top: 0.3em; }
+article dl.large dt:not(:first-child), article dl.large dt:not(:first-child) + dd {
+  margin-top: 0.7em; }
+article blockquote {
+  text-align: center; }
+  @media print {
+    article blockquote .action {
+      border: 0;
+      margin: 0;
+      padding: 0; } }
+article .number {
+  font-family: "AJensonPro-Regular", serif;
+  letter-spacing: 2px; }
+article a.action {
+  display: inline-block; }
+article .heading.current::before {
+  content: "\0020";
+  display: block;
+  border-style: solid;
+  border-color: transparent transparent transparent #0067ac;
+  border-width: 7px 0 7px 10px;
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 0.3em; }
+
+.footer-container footer {
+  color: white;
+  padding: 26px 0; }
+
+/* ==============
+   Components
+   ============== */
+.more-js .trigger {
+  display: inline-block; }
+.more-js:not([data-more-custom]) .detail, .more-js:not([data-more-custom]) .less {
+  display: none; }
+
+.map, .map > iframe, .map > .curtain {
+  width: 100%;
+  height: 300px; }
+.map .curtain {
+  background-color: #0067ac;
+  background-image: url(http://pengxwang.s3.amazonaws.com/wedding/img/map-streetview-screen.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover; }
+  .map .curtain figcaption {
+    text-align: center;
+    position: absolute;
+    display: block;
+    left: 50%;
+    margin-left: -50px;
+    width: 100px;
+    top: 50%;
+    margin-top: -28.5px;
+    height: 57px; }
+@media print {
+  .map {
+    display: none; } }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px; }
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%; }
+
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+.invisible {
+  visibility: hidden; }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  *zoom: 1; }
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a:not([href='#']):after {
+    content: " (" attr(href) ")";
+    font-variant: normal;
+    text-transform: lowercase; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; } }

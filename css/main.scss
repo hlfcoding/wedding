@@ -1,0 +1,818 @@
+@import "vendor/bootstrap.scss";
+
+$_root: 'http://pengxwang.s3.amazonaws.com/wedding';
+
+@include font-face(DanteMT-Italic, dantemtitalic, #{$_root}/fonts);
+@include font-face(CaslonTwoTwentyFourLT-Book, itccaslon224ltbook, #{$_root}/fonts);
+@include font-face(CaslonTwoTwentyFourLT-Bold, itccaslon224ltbold, #{$_root}/fonts);
+@include font-face(AJensonPro-Regular, ajensonproregular, #{$_root}/fonts);
+
+/* ==============
+   Skin
+   ============== */
+
+$white-1: #FFFFFF;
+$black-1: #231F20;
+$gray-1: #4D4C48;
+$blue-1: #0067AC;
+$blue-1-d: #00478C;
+$blue-2: #56A0D3;
+$blue-2-l: mix($blue-2, $white-1, 30%);
+$font-1: 'DanteMT-Italic', serif;
+$font-1-generic: Georgia, serif;
+$font-2: 'CaslonTwoTwentyFourLT-Book', serif;
+$font-2-bold: 'CaslonTwoTwentyFourLT-Bold', serif;
+$font-3: 'AJensonPro-Regular', serif;
+$base-line: 18px;
+$base-lead: 26px;
+$ribbon-size: $base-lead - $base-line;
+$main-col-size: 57%;
+$side-col-size: 37%;
+$big-headings: 'h1, h2, h3';
+$small-headings: 'h4, h5, h6';
+
+$screen-size-1: 480px;
+$screen-size-2: 1024px;
+$screen-size-3: 1140px;
+
+/* ==============
+   Patterns
+   ============== */
+
+%type-1 {
+  font: {
+    family: $font-1;
+    weight: normal;
+  }
+}
+
+%type-2 {
+  font: {
+    family: $font-2;
+    variant: small-caps;
+    weight: normal;
+  }
+}
+
+%type-3 {
+  font: {
+    family: $font-3;
+    variant: small-caps;
+    weight: normal;
+  }
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  nav & {
+    letter-spacing: 0;
+  }
+  .number, %type-mod-meta {
+    font-size: 0.75em;
+  }
+}
+
+%type-mod-meta {
+  @include transition(opacity);
+  #{$big-headings} {
+    font: {
+      size: 0.7em;
+      style: normal;
+    }
+  }
+  opacity: 0.7;
+  text-transform: lowercase;
+  & & {
+    font-size: 1em;
+  }
+  &.selected {
+    opacity: 1;
+  }
+}
+
+%type-mod-sub {
+  font-size: 0.9em;
+  opacity: 0.7;
+}
+
+%type-mod-em {
+  border-bottom: {
+    width: 1px;
+    style: dotted;
+  }
+  %type-1 & {
+    font-style: normal;
+  }
+}
+
+%type-mod-link {
+  text-decoration: none;
+  & {
+    border-bottom: {
+      width: 1px;
+      style: dotted;
+    }
+  }
+  #{$_weight} &:hover {
+    border-bottom-style: solid;
+  }
+  %type-mod-em & {
+    border-bottom-style: none;
+  }
+}
+
+%size-1 {
+  $line: $base-line - 1px;
+  $gutter: $base-lead - $line;
+  font-size: $line;
+  line-height: 1.5em;
+  padding: ($gutter / 2) $gutter;
+}
+
+%size-2 {
+  $line: 19px;
+  font-size: $line;
+}
+
+%size-2-box {
+  $line: 15px;
+  @extend %size-2;
+  padding: ($line + 2px) ($line * 2) $line;
+  nav & {
+    padding: { left: $line; right: $line; }
+  }
+}
+
+%size-3 {
+  $line: 20px;
+  $lead: $base-lead * 1.5;
+  font-size: $line;
+  line-height: $base-lead;
+  padding: $lead;
+}
+
+%stationery-1 {
+  @extend %text-inset-1;
+  color: $white-1;
+  background: {
+    color: $blue-1;
+    image: url(#{$_root}/img/wave-pattern-inverted.png);
+    attachment: fixed;
+  }
+  overflow: hidden;
+  %sheet {
+    $blue-1-glass: transparentize($blue-1, 0.5);
+    background: $blue-1-glass;
+    @include box-shadow(0 0 50px $base-lead $blue-1-glass);
+  }
+  %type-mod-link {
+    $clr: $white-1;
+    color: $clr;
+    border-bottom-color: $clr;
+    &[href^='tel'], &.native-bridge {
+      border-bottom-color: $blue-2;
+    }
+  }
+  %type-mod-em {
+    border-color: $white-1;
+  }
+}
+
+%stationery-2 {
+  color: $black-1;
+  background: {
+    color: $white-1;
+    image: url(#{$_root}/img/linen-pattern.png);
+  }
+  /* For Caslon.
+  #{$big-headings} {
+    // Black on white.
+    font-weight: bold;
+  }
+  */
+  %type-mod-link {
+    $clr: $blue-1;
+    $meta-clr: $white-1;
+    color: $clr;
+    border-bottom-color: $clr;
+    &[href^='tel:'] {
+      color: $meta-clr;
+      border-bottom-color: $meta-clr;
+    }
+  }
+  %type-mod-em {
+    border-color: $black-1;
+  }
+}
+
+%stationery-3 {
+  color: $white-1;
+  background: {
+    color: $gray-1;
+    image: url(#{$_root}/img/dark-linen-pattern.png);
+  }
+}
+
+%stationery-4 {
+  @extend %shadow-1;
+  @extend %text-inset-2;
+  color: darken($blue-1, 10%);
+  background-color: transparentize($blue-2, 0.5);
+}
+
+%stationery-5 {
+  @extend %shadow-1;
+  @extend %text-inset-1;
+  color: $blue-2-l;
+  background-color: transparentize($blue-1-d, 0.5);
+  %type-mod-em {
+    color: $white-1;
+  }
+}
+
+%shadow-1 {
+  @include box-shadow(0 2px 3px 0 $b-3, inset 0 0 0 1px $w-2);
+  border: 1px solid $b-2;
+}
+
+%text-inset-1 {
+  text-shadow: 0 -1px 0 $black-1;
+}
+
+%text-inset-2 {
+  text-shadow: 0 1px 0 $w-5;
+}
+
+%control-1 {
+  @extend %type-3;
+  @extend %shadow-1;
+  @extend %text-inset-1;
+  @include transition(background);
+  background: transparentize($blue-1, 0.3);
+  color: $white-1;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  line-height: $base-lead;
+  text: {
+    align: center;
+    decoration: none;
+    transform: uppercase;
+  }
+  &:hover {
+    color: $white-1;
+    background: $blue-1-d;
+  }
+}
+
+%content-box-1 {
+  padding: $base-lead;
+  :first-child { margin-top: 0; }
+  :last-child { margin-bottom: 0; }
+}
+%content-box-2 {
+  padding: ($base-lead / 2);
+}
+
+%hash-list {
+  dd, dt { vertical-align: middle; }
+  dt {
+    float: left;
+    padding-right: $base-line;
+    margin: 0;
+    clear: left;
+  }
+  dd {
+    display: block;
+    clear: right;
+  }
+}
+
+%top-rule {
+  @include box-shadow(inset 0 2px 0 -1px $white-1);
+  border-top: 1px solid $b-2;
+  padding-top: $base-lead;
+}
+
+%top-tab {
+  margin-top: -1px;
+  &%shadow-1 {
+    margin-top: -2px;
+  }
+}
+
+// TODO: Add into lib.
+%no-doc-flow {
+  display: block;
+  position: relative;
+  > * {
+    display: block;
+    position: absolute;
+  }
+}
+
+@mixin sidebar {
+  float: right;
+  width: $side-col-size;
+}
+
+/* ==============
+   General
+   ============== */
+
+body {
+  font: #{$base-line}/#{$base-lead} #{$font-1};
+  // Reveal.
+  @include transition(opacity);
+  @extend %stationery-2;
+  opacity: 0;
+  &.ready {
+    opacity: 1;
+  }
+}
+.space {
+  font-family: $font-1-generic;
+  line-height: 1;
+}
+#{$big-headings} {
+  @extend %type-2;
+}
+#{$small-headings} {
+  @extend %type-3;
+}
+h4 {
+  @extend %size-2;
+}
+h5, h6 {
+  @extend %size-1;
+}
+p {
+  @extend %type-1;
+}
+.meta, small {
+  @extend %type-mod-meta;
+}
+
+label {
+  @extend %type-3;
+  &[for], &[for] * {
+    cursor: pointer;
+  }
+}
+fieldset.radio > label {
+  $gutter: 0.5em;
+  &:not(:first-child) {
+    padding-left: $gutter;
+    border-left: 1px dotted $white-1;
+  }
+  &:not(:last-child) {
+    padding-right: $gutter;
+  }
+}
+
+img[src=''] {
+  display: none;
+}
+
+::-moz-selection {
+  background: transparent;
+  .main-container & {
+    background: $blue-2-l;
+  }
+}
+::selection {
+  background: transparent;
+  .main-container & {
+    background: $blue-2-l;
+  }
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 5%;
+  position: relative;
+  @media only screen and (min-width: $screen-size-3) {
+    width: 1026px; // 1140px - 10% for margins
+    margin: 0 auto;
+  }
+}
+em {
+  @extend %type-mod-em;
+}
+.and {
+  @extend %type-1;
+}
+
+[data-lang] {
+  display: none;
+}
+[data-lang^='zh'] {
+  font-size: 0.95em;
+  line-height: 1em;
+  .action &, .trigger &, .stalking & {
+    font-size: 1.15em;
+  }
+  .and { font-size: 1em; }
+}
+
+$title-top: $base-lead * 1.5;
+.header-container {
+  border-bottom: $ribbon-size solid $blue-1;
+  .title {
+    @extend %content-box-1;
+    padding: $title-top 0 $base-line;
+    .heading { margin: 0; }
+    @media only screen and (min-width: $screen-size-2) { // Wider for nav buttons.
+      float: left;
+    }
+    .ie7 & {
+      padding-top: $base-lead;
+    }
+  }
+  overflow: visible;
+  @media print {
+    border-bottom: 0;
+  }
+}
+
+.footer-container,
+.main aside {
+  border-top: $ribbon-size solid $blue-1;
+  @media print {
+    border-top: 0;
+  }
+}
+
+.header-container,
+.footer-container {
+  cursor: default;
+}
+
+.header-container,
+.footer-container,
+#{$_weight} .main aside {
+  @extend %stationery-1;
+}
+
+.main-container {
+  @extend %stationery-2;
+  $y: 4px;
+  $size: 3px;
+  @include box-shadow(inset 0 $y $size -#{$size} $b-7, inset 0 -#{$y} $size -#{$size} $b-7);
+  border: {
+    width: 1px 0;
+    style: solid;
+    color: $blue-2;
+  }
+  p, dl, ul, ol {
+    @extend %text-inset-2;
+  }
+  article .heading {
+    color: mix($white-1, $black-1, 20%);
+    font-family: $font-2-bold;
+  }
+}
+
+.main aside:first-of-type {
+  margin-top: $base-lead; // Align.
+}
+
+/* ==============
+   Header
+   ============== */
+
+#title {
+  @extend %sheet;
+  font: {
+    size: 42px;
+  }
+  &.stalking {
+    @extend %control-1;
+    @extend %size-2-box;
+    @extend %top-tab;
+    width: auto !important;
+    @media only screen and (min-width: $screen-size-1) and (max-width: $screen-size-2) {
+      display: none;
+    }
+  }
+}
+
+#i18n {
+  bottom: $base-line;
+  position: absolute;
+  right: 0;
+  // Includes additional buffer.
+  @media only screen and (max-width: $screen-size-2) {
+    bottom: auto;
+    top: $title-top + 8px; // Cap and x-height difference.
+  }
+  @media only screen and (max-width: $screen-size-1 + 160px) {
+    left: 0;
+    right: auto;
+    top: 5px;
+    font-size: 0.8em;
+  }
+  @media print {
+    display: none;
+  }
+}
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li, a {
+    display: block;
+  }
+  a {
+    @extend %control-1;
+    @extend %size-2-box;
+    @extend %top-tab;
+    margin-bottom: 10px;
+
+    @media only screen and (min-width: $screen-size-1) {
+      float: left;
+      width: 31%;
+      margin: {
+        left: 1.7%; right: 1.7%;
+        bottom: 0;
+      }
+      .oldie nav & {
+        margin: 0 0.7%;
+      }
+    }
+  }
+  &.more-js {
+    .trigger {
+      display: none;
+      position: absolute;
+      top: $base-lead;
+      right: $base-lead;
+      @media only screen and (max-width: $screen-size-1) {
+       display: block;
+      }
+    }
+  }
+  @media only screen and (min-width: $screen-size-1) {
+    li:first-child > a {
+      margin-left: 0;
+    }
+    li:last-child > a {
+      margin-right: 0;
+    }
+    .lt-ie8 & li {
+      display: inline;
+    }
+  }
+  @media only screen and (min-width: $screen-size-1) and (max-width: $screen-size-2) {
+    &:not(.stalking) {
+      // Tabs.
+      height: 60px;
+      padding-top: 4px;
+      overflow-y: hidden;
+    }
+  }
+  @media only screen and (min-width: $screen-size-2) { // Wider for nav buttons.
+    @include sidebar;
+  }
+  @media print {
+    display: none;
+  }
+}
+
+/* ==============
+   Main
+   ============== */
+
+a:not(.action):not(.trigger):not(.cloaked) {
+  @extend %type-mod-link;
+}
+a.cloaked {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.main {
+  padding: $base-lead 0;
+  aside {
+    @extend %content-box-1;
+    @extend %shadow-1;
+    @extend %size-2;
+    > .inner {
+      @extend %sheet;
+    }
+    :not(.note):not(em) {
+      font-style: normal;
+    }
+    .detail, .note {
+      @extend %content-box-2;
+      @extend %size-1;
+      @extend %shadow-1;
+      @extend %stationery-5;
+    }
+    @media only screen and (min-width: $screen-size-2) { // Wider for nav buttons.
+      @include sidebar;
+    }
+    @media print {
+      border-top: 1px solid;
+      border: 0;
+      margin-top: 1em;
+      margin: 0;
+      padding-top: 1em;
+      padding: 0;
+    }
+  }
+  address {
+    .directions {
+      @extend %type-mod-sub;
+      display: block;
+      margin: 0.5em 0;
+    }
+  }
+  .more-js .trigger {
+    @extend %type-mod-sub;
+    @extend %type-mod-link;
+  }
+  #{$big-headings} {
+    text-transform: lowercase;
+  }
+  p, #{$big-headings}, blockquote, figure {
+    margin: $base-lead 0;
+  }
+  @media only screen and (min-width: $screen-size-2) { // Wider for nav buttons.
+    article {
+      float: left;
+      width: $main-col-size;
+    }
+  }
+}
+
+article {
+  @extend %size-2;
+  figure {
+    @extend %shadow-1;
+    @extend %stationery-3;
+    display: block;
+    img {
+      border: 1px solid $w-2;
+      @include box-shadow(0 2px 3px $b-3);
+      width: 100%;
+    }
+    @media print {
+      display: none;
+    }
+  }
+  figcaption {
+    @extend %type-1;
+    @extend %size-1;
+    text-transform: lowercase;
+    display: block;
+    text-align: right;
+  }
+  .note {
+    @extend %content-box-1;
+    @extend %size-1;
+    @extend %stationery-4;
+  }
+  dl {
+    @extend %hash-list;
+    $w: 25%;
+    dt {
+      width: $w;
+      @media only screen and (max-width: $screen-size-1) {
+        .extra {
+          display: none;
+        }
+      }
+    }
+    dd {
+      margin-left: $w;
+    }
+    small:not(.extra) {
+      display: block;
+      line-height: 1.3em;
+    }
+    &.large dd+dd {
+      margin-top: 0.3em;
+    }
+    &.large dt:not(:first-child) {
+      &, &+dd {
+        margin-top: 0.7em;
+      }
+    }
+  }
+  blockquote {
+    @extend %shadow-1;
+    @extend %size-3;
+    @extend %stationery-3;
+    text-align: center;
+    @media print {
+      .action {
+        border: 0;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+  .number { // For blocks, not inline.
+    font-family: $font-3;
+    letter-spacing: 2px;
+  }
+  a.action {
+    @extend %control-1;
+    @extend %size-2-box;
+    display: inline-block;
+  }
+  > :not(:first-child) .heading {
+    @extend %top-rule;
+  }
+  .heading.current {
+    &::before {
+      $arrow-size: 10px;
+      $arrow-color: $blue-1;
+      content: "\0020";
+      display: block;
+      border: {
+        style: solid;
+        color: transparent transparent transparent $arrow-color;
+        width: ($arrow-size * 0.7) 0 ($arrow-size * 0.7) $arrow-size;
+      }
+      position: absolute;
+      margin-left: -($arrow-size * 2);
+      margin-top: 0.3em; // Small-caps difference.
+    }
+  }
+}
+
+.footer-container footer {
+  color: white;
+  padding: $base-lead 0;
+}
+#colophon {
+  @extend %sheet;
+}
+
+/* ==============
+   Components
+   ============== */
+
+.more-js {
+  .trigger {
+    display: inline-block;
+  }
+  &:not([data-more-custom]) {
+    .detail, .less {
+      display: none;
+    }
+  }
+}
+.map {
+  @extend %no-doc-flow;
+  $w: 100%;
+  $h: 300px;
+  &, > iframe, > .curtain {
+    width: $w;
+    height: $h;
+  }
+  iframe {
+    @extend %shadow-1;
+  }
+  .curtain {
+    @extend %shadow-1;
+    background: {
+      color: $blue-1;
+      image: url(#{$_root}/img/map-streetview-screen.jpg);
+      repeat: no-repeat;
+      position: center center;
+    }
+    @include background-size(cover);
+    figcaption {
+      @extend %control-1;
+      @extend %size-2-box;
+      $w: 100px;
+      $h: 57px;
+      text-align: center;
+      @include centered($w, $h);
+    }
+  }
+  @media print {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+@import "vendor/helpers.scss";
+
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+
+  @import "vendor/boilerplate-print.scss";
+
+}

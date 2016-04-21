@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+METHOD:PUBLISH
+VERSION:2.0
+PRODID:-//pengxwang//wedding//EN
+X-WR-CALNAME:Wedding Dates
+X-WR-TIMEZONE:America/Los_Angeles
+CALSCALE:GERGORIAN
+BEGIN:VEVENT
+UID:0
+DTSTART;VALUE=DATE:20130605
+DTEND;VALUE=DATE:20130606
+LOCATION:Hilton La Jolla Torrey Pines
+DESCRIPTION:See http://wedding.pengxwang.com for more info.
+SUMMARY:Last Day for Hotel Reservation
+END:VEVENT
+BEGIN:VEVENT
+UID:1
+DTSTART;VALUE=DATE:20130706
+DTEND;VALUE=DATE:20130707
+LOCATION:Hilton La Jolla Torrey Pines
+DESCRIPTION:4pm to 10pm. See http://wedding.pengxwang.com for more info.
+SUMMARY:Yinglei & Peng Wedding
+END:VEVENT
+END:VCALENDAR

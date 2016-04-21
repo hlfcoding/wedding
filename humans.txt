@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Peng -- developer, designer, copywriter -- @hlfcoding | pengxwang.com
+    Yinglei -- advisor, translator -- ying-lei.com
+
+# THANKS
+
+    Xiaojun Xu
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr, RequireJS, UnderscoreJS
+    jQuery: LocalScroll, ScrollTo, Stalker, Cookie
+    CoffeeScript, Sass
