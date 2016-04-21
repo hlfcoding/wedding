@@ -74,7 +74,6 @@ $screen-size-3: 1140px;
 }
 
 %type-mod-meta {
-  @include transition(opacity);
   #{$big-headings} {
     font: {
       size: 0.7em;
@@ -83,6 +82,7 @@ $screen-size-3: 1140px;
   }
   opacity: 0.7;
   text-transform: lowercase;
+  transition: opacity 0.3s ease-in-out;
   & & {
     font-size: 1em;
   }
@@ -164,7 +164,7 @@ $screen-size-3: 1140px;
   %sheet {
     $blue-1-glass: transparentize($blue-1, 0.5);
     background: $blue-1-glass;
-    @include box-shadow(0 0 50px $base-lead $blue-1-glass);
+    box-shadow: 0 0 50px $base-lead $blue-1-glass;
   }
   %type-mod-link {
     $clr: $white-1;
@@ -232,7 +232,10 @@ $screen-size-3: 1140px;
 }
 
 %shadow-1 {
-  @include box-shadow(0 2px 3px 0 $b-3, inset 0 0 0 1px $w-2);
+  box-shadow: (
+    0 2px 3px 0 $b-3,
+    inset 0 0 0 1px $w-2
+  );
   border: 1px solid $b-2;
 }
 
@@ -248,7 +251,6 @@ $screen-size-3: 1140px;
   @extend %type-3;
   @extend %shadow-1;
   @extend %text-inset-1;
-  @include transition(background);
   background: transparentize($blue-1, 0.3);
   color: $white-1;
   cursor: pointer;
@@ -260,6 +262,7 @@ $screen-size-3: 1140px;
     decoration: none;
     transform: uppercase;
   }
+  transition: background 0.3s ease-in-out;
   &:hover {
     color: $white-1;
     background: $blue-1-d;
@@ -290,8 +293,8 @@ $screen-size-3: 1140px;
 }
 
 %top-rule {
-  @include box-shadow(inset 0 2px 0 -1px $white-1);
   border-top: 1px solid $b-2;
+  box-shadow: inset 0 2px 0 -1px $white-1;
   padding-top: $base-lead;
 }
 
@@ -324,9 +327,9 @@ $screen-size-3: 1140px;
 body {
   font: #{$base-line}/#{$base-lead} #{$font-1};
   // Reveal.
-  @include transition(opacity);
   @extend %stationery-2;
   opacity: 0;
+  transition: opacity 0.3s ease-in-out;
   &.ready {
     opacity: 1;
   }
@@ -459,12 +462,15 @@ $title-top: $base-lead * 1.5;
   @extend %stationery-2;
   $y: 4px;
   $size: 3px;
-  @include box-shadow(inset 0 $y $size -#{$size} $b-7, inset 0 -#{$y} $size -#{$size} $b-7);
   border: {
     width: 1px 0;
     style: solid;
     color: $blue-2;
   }
+  box-shadow: (
+    inset 0 $y $size -#{$size} $b-7,
+    inset 0 -#{$y} $size -#{$size} $b-7
+  );
   p, dl, ul, ol {
     @extend %text-inset-2;
   }
@@ -658,7 +664,7 @@ article {
     display: block;
     img {
       border: 1px solid $w-2;
-      @include box-shadow(0 2px 3px $b-3);
+      box-shadow: 0 2px 3px $b-3;
       width: 100%;
     }
     @media print {
@@ -787,8 +793,8 @@ article {
       image: url(#{$_root}/img/map-streetview-screen.jpg);
       repeat: no-repeat;
       position: center center;
+      size: cover;
     }
-    @include background-size(cover);
     figcaption {
       @extend %control-1;
       @extend %size-2-box;
