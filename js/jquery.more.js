@@ -1,6 +1,12 @@
 define(['jquery', 'jquery.mobile.custom'], function($, jqm) {
   "use strict";
-  $.more = {};
+
+  $.more = {
+    init: function() {
+      $('.more-js:not([data-more-custom])').more();
+    }
+  };
+
   $.fn.more = function(on) {
     // TODO: Memory cleanup (see $.event.destroyed).
     on = (on != null) ? on : false;
@@ -31,8 +37,6 @@ define(['jquery', 'jquery.mobile.custom'], function($, jqm) {
     });
     return this;
   };
-  $(function() {
-    $('.more-js:not([data-more-custom])').more();
-  });
+
   return $.more;
 });

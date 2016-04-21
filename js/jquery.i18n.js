@@ -19,6 +19,20 @@ define(['jquery', 'jquery.mobile.custom', 'jquery.cookie'], function($, jqm) {
     return this;
   };
   $.i18n = {
+    init: function() {
+      // Initialize.
+      $context
+        .on('lang.i18n', function(e, lang) {
+          $(this).attr('lang', lang);
+        })
+        .i18n();
+      this.setupMenu();
+      var lang = $.cookie('lang') || $.i18n.lang();
+      if (lang != null) {
+        // Initial language.
+        $context.trigger('lang.i18n', [ lang ]);
+      }
+    },
     setupMenu: function() {
       // Menu UI.
       var $menu = $('#i18n');
@@ -45,19 +59,6 @@ define(['jquery', 'jquery.mobile.custom', 'jquery.cookie'], function($, jqm) {
     },
     lang: function() { return $context.attr('lang'); }
   };
-  $(function() {
-    var ns = $.i18n;
-    // Initialize.
-    $context
-      .on('lang.i18n', function(e, lang) {
-        $(this).attr('lang', lang);
-      })
-      .i18n();
-    ns.setupMenu();
-    var lang = $.cookie('lang') || $.i18n.lang();
-    if (lang != null) {
-      // Initial language.
-      $context.trigger('lang.i18n', [ lang ]);
-    }
-  });
+
+  return $.i18n;
 });

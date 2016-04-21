@@ -5,8 +5,8 @@
     baseUrl: 'js/vendor',
     paths: { app: '..' },
     shim: {
-      'jquery.scroll-to': { deps: ['jquery'] },
-      'jquery.local-scroll': { deps: ['jquery', 'jquery.scroll-to'] },
+      'jquery.scrollTo': { deps: ['jquery'] },
+      'jquery.localScroll': { deps: ['jquery', 'jquery.scrollTo'] },
       'jquery.stalker': { deps: ['jquery'] },
     }
   });
@@ -15,10 +15,10 @@ define([
   'console',
   'jquery',
   'underscore',
-  'jquery.mobile.custom',
+  'jquery.mobile.custom', // FIXME
   // Only non-exports after this point.
-  'jquery.scroll-to',
-  'jquery.local-scroll',
+  'jquery.scrollTo',
+  'jquery.localScroll',
   'jquery.stalker',
   'app/jquery.more',
   'app/jquery.lazy',
@@ -126,4 +126,9 @@ function(console, $, _, jqm) {
     var $a = $(this);
     $a.attr('href', 'webcal://'+location.hostname+'/'+$a.data('webcal'));
   });
+
+  // Default plugin initialization.
+  $.i18n.init();
+  $.lazy.init();
+  $.more.init();
 });

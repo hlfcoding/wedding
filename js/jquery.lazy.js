@@ -1,6 +1,12 @@
 define(['jquery', 'jquery.mobile.custom', 'app/jquery.i18n'], function($, jqm) {
   "use strict";
-  $.lazy = {};
+
+  $.lazy = {
+    init: function() {
+      $('.lazy-js').lazy();
+    }
+  };
+
   $.fn.lazy = function() {
     this.each(function() {
       var $el = $(this).hide();
@@ -37,8 +43,6 @@ define(['jquery', 'jquery.mobile.custom', 'app/jquery.i18n'], function($, jqm) {
     });
     return this;
   };
-  $(function() {
-    $('.lazy-js').lazy();
-  });
+
   return $.lazy;
 });
