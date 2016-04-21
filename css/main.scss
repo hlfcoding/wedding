@@ -1,6 +1,9 @@
-@import "vendor/bootstrap.scss";
+@import "vendor/normalize";
+@import "vendor/base";
 
 $_root: 'http://pengxwang.s3.amazonaws.com/wedding';
+
+@import "vendor/chrome-helpers";
 
 @include font-face(DanteMT-Italic, dantemtitalic, #{$_root}/fonts);
 @include font-face(CaslonTwoTwentyFourLT-Book, itccaslon224ltbook, #{$_root}/fonts);
@@ -804,7 +807,7 @@ article {
    Helper classes
    ========================================================================== */
 
-@import "vendor/helpers.scss";
+@import "vendor/helpers";
 
 
 /* ==========================================================================
@@ -813,6 +816,6 @@ article {
 
 @media print {
 
-  @import "vendor/boilerplate-print.scss";
+  @import "vendor/print";
 
 }

@@ -10,7 +10,11 @@
     "type": "git",
     "url": "https://github.com/hlfcoding/hlf-tumblr-log"
   },
+  "dependencies": {
+    "hlf-css": "^0.2.4"
+  },
   "scripts": {
-    "lib": "echo todo"
+    "hlf-css:dist": "cp node_modules/hlf-css/dist/scss/imports/* css/vendor",
+    "hlf-css:lib": "cp node_modules/hlf-css/lib/modified/{_normalize,html5-boilerplate/_{base,helpers,print}}.scss css/vendor"
   }
 }
