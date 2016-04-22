@@ -16,6 +16,5 @@ cp -v $src/jquery.scrollto/jquery.scrollTo.min.js $dest/jquery.scrollTo.js
 cp -v $src/underscore/underscore-min.js $dest/underscore.js
 
 cd $dest || exit
-curl -O https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js \
-     -O https://raw.githubusercontent.com/box/stalker/master/jquery.stalker.js
+curl -O https://raw.githubusercontent.com/box/stalker/master/jquery.stalker.js
 }
