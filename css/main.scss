@@ -1,5 +1,5 @@
-@import "vendor/normalize";
-@import "vendor/base";
+@import 'vendor/normalize';
+@import 'vendor/base';
 
 * {
   box-sizing: border-box;
@@ -9,7 +9,7 @@ $_root: 'http://pengxwang.s3.amazonaws.com/wedding';
 // $_root: '..';
 $_weight: '#html';
 
-@import "vendor/chrome-helpers";
+@import 'vendor/chrome-helpers';
 
 @include font-face(DanteMT-Italic, dantemtitalic, #{$_root}/fonts);
 @include font-face(CaslonTwoTwentyFourLT-Book, itccaslon224ltbook, #{$_root}/fonts);
@@ -20,12 +20,12 @@ $_weight: '#html';
    Skin
    ============== */
 
-$white-1: #FFFFFF;
-$black-1: #231F20;
-$gray-1: #4D4C48;
-$blue-1: #0067AC;
-$blue-1-d: #00478C;
-$blue-2: #56A0D3;
+$white-1: #ffffff;
+$black-1: #231f20;
+$gray-1: #4d4c48;
+$blue-1: #0067ac;
+$blue-1-d: #00478c;
+$blue-2: #56a0d3;
 $blue-2-l: mix($blue-2, $white-1, 30%);
 $font-1: 'DanteMT-Italic', serif;
 $font-1-generic: Georgia, serif;
@@ -37,6 +37,7 @@ $base-lead: 26px;
 $ribbon-size: $base-lead - $base-line;
 $main-col-size: 57%;
 $side-col-size: 37%;
+$title-top: $base-lead * 1.5;
 $big-headings: 'h1, h2, h3';
 $small-headings: 'h4, h5, h6';
 
@@ -49,64 +50,54 @@ $screen-size-3: 1140px;
    ============== */
 
 %type-1 {
-  font: {
-    family: $font-1;
-    weight: normal;
-  }
+  font: { family: $font-1; weight: normal; }
 }
 
 %type-2 {
-  font: {
-    family: $font-2;
-    variant: small-caps;
-    weight: normal;
-  }
+  font: { family: $font-2; variant: small-caps; weight: normal; }
 }
 
 %type-3 {
-  font: {
-    family: $font-3;
-    variant: small-caps;
-    weight: normal;
-  }
-  text-transform: lowercase;
+  font: { family: $font-3; variant: small-caps; weight: normal; }
   letter-spacing: 1px;
+  text-transform: lowercase;
+
   nav & {
     letter-spacing: 0;
   }
-  .number, %type-mod-meta {
-    font-size: 0.75em;
+
+  .number,
+  %type-mod-meta {
+    font-size: .75em;
   }
 }
 
 %type-mod-meta {
-  #{$big-headings} {
-    font: {
-      size: 0.7em;
-      style: normal;
-    }
-  }
-  opacity: 0.7;
+  opacity: .7;
   text-transform: lowercase;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+
+  #{$big-headings} {
+    font: { size: .7em; style: normal; }
+  }
+
   & & {
     font-size: 1em;
   }
+
   &.selected {
     opacity: 1;
   }
 }
 
 %type-mod-sub {
-  font-size: 0.9em;
-  opacity: 0.7;
+  font-size: .9em;
+  opacity: .7;
 }
 
 %type-mod-em {
-  border-bottom: {
-    width: 1px;
-    style: dotted;
-  }
+  border-bottom: { style: dotted; width: 1px; }
+
   %type-1 & {
     font-style: normal;
   }
@@ -114,15 +105,15 @@ $screen-size-3: 1140px;
 
 %type-mod-link {
   text-decoration: none;
+
   & {
-    border-bottom: {
-      width: 1px;
-      style: dotted;
-    }
+    border-bottom: { style: dotted; width: 1px; }
   }
+
   #{$_weight} &:hover {
     border-bottom-style: solid;
   }
+
   %type-mod-em & {
     border-bottom-style: none;
   }
@@ -145,6 +136,7 @@ $screen-size-3: 1140px;
   $line: 15px;
   @extend %size-2;
   padding: ($line + 2px) ($line * 2) $line;
+
   nav & {
     padding: { left: $line; right: $line; }
   }
@@ -160,53 +152,62 @@ $screen-size-3: 1140px;
 
 %stationery-1 {
   @extend %text-inset-1;
-  color: $white-1;
   background: {
+    attachment: fixed;
     color: $blue-1;
     image: url(#{$_root}/img/wave-pattern-inverted.png);
-    attachment: fixed;
   }
+  color: $white-1;
   overflow: hidden;
+
   %sheet {
-    $blue-1-glass: transparentize($blue-1, 0.5);
+    $blue-1-glass: transparentize($blue-1, .5);
     background: $blue-1-glass;
     box-shadow: 0 0 50px $base-lead $blue-1-glass;
   }
+
   %type-mod-link {
     $clr: $white-1;
     color: $clr;
     border-bottom-color: $clr;
-    &[href^='tel'], &.native-bridge {
+
+    &[href^='tel'],
+    &.native-bridge {
       border-bottom-color: $blue-2;
     }
   }
+
   %type-mod-em {
     border-color: $white-1;
   }
 }
 
 %stationery-2 {
-  color: $black-1;
   background: {
     color: $white-1;
     image: url(#{$_root}/img/linen-pattern.png);
   }
+  color: $black-1;
+
   /* For Caslon.
   #{$big-headings} {
     // Black on white.
     font-weight: bold;
   }
   */
+
   %type-mod-link {
     $clr: $blue-1;
     $meta-clr: $white-1;
-    color: $clr;
     border-bottom-color: $clr;
+    color: $clr;
+
     &[href^='tel:'] {
       color: $meta-clr;
       border-bottom-color: $meta-clr;
     }
   }
+
   %type-mod-em {
     border-color: $black-1;
   }
@@ -223,26 +224,27 @@ $screen-size-3: 1140px;
 %stationery-4 {
   @extend %shadow-1;
   @extend %text-inset-2;
+  background-color: transparentize($blue-2, .5);
   color: darken($blue-1, 10%);
-  background-color: transparentize($blue-2, 0.5);
 }
 
 %stationery-5 {
   @extend %shadow-1;
   @extend %text-inset-1;
+  background-color: transparentize($blue-1-d, .5);
   color: $blue-2-l;
-  background-color: transparentize($blue-1-d, 0.5);
+
   %type-mod-em {
     color: $white-1;
   }
 }
 
 %shadow-1 {
+  border: 1px solid shade(.2);
   box-shadow: (
-    0 2px 3px 0 $b-3,
-    inset 0 0 0 1px $w-2
+    0 2px 3px 0 shade(.3),
+    inset 0 0 0 1px light(.2)
   );
-  border: 1px solid $b-2;
 }
 
 %text-inset-1 {
@@ -250,14 +252,14 @@ $screen-size-3: 1140px;
 }
 
 %text-inset-2 {
-  text-shadow: 0 1px 0 $w-5;
+  text-shadow: 0 1px 0 light(.5);
 }
 
 %control-1 {
-  @extend %type-3;
   @extend %shadow-1;
   @extend %text-inset-1;
-  background: transparentize($blue-1, 0.3);
+  @extend %type-3;
+  background: transparentize($blue-1, .3);
   color: $white-1;
   cursor: pointer;
   display: block;
@@ -268,7 +270,8 @@ $screen-size-3: 1140px;
     decoration: none;
     transform: uppercase;
   }
-  transition: background 0.3s ease-in-out;
+  transition: background .3s ease-in-out;
+
   &:hover {
     color: $white-1;
     background: $blue-1-d;
@@ -277,21 +280,27 @@ $screen-size-3: 1140px;
 
 %content-box-1 {
   padding: $base-lead;
+
   :first-child { margin-top: 0; }
+
   :last-child { margin-bottom: 0; }
 }
+
 %content-box-2 {
   padding: ($base-lead / 2);
 }
 
 %hash-list {
-  dd, dt { vertical-align: middle; }
+  dd,
+  dt { vertical-align: middle; }
+
   dt {
     float: left;
     padding-right: $base-line;
     margin: 0;
     clear: left;
   }
+
   dd {
     display: block;
     clear: right;
@@ -299,13 +308,14 @@ $screen-size-3: 1140px;
 }
 
 %top-rule {
-  border-top: 1px solid $b-2;
+  border-top: 1px solid shade(.2);
   box-shadow: inset 0 2px 0 -1px $white-1;
   padding-top: $base-lead;
 }
 
 %top-tab {
   margin-top: -1px;
+
   &%shadow-1 {
     margin-top: -2px;
   }
@@ -315,6 +325,7 @@ $screen-size-3: 1140px;
 %no-doc-flow {
   display: block;
   position: relative;
+
   > * {
     display: block;
     position: absolute;
@@ -331,50 +342,64 @@ $screen-size-3: 1140px;
    ============== */
 
 body {
-  font: #{$base-line}/#{$base-lead} #{$font-1};
-  // Reveal.
   @extend %stationery-2;
+  font: #{$base-line}/#{$base-lead} #{$font-1};
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+
   &.ready {
     opacity: 1;
   }
 }
+
 .space {
   font-family: $font-1-generic;
   line-height: 1;
 }
+
 #{$big-headings} {
   @extend %type-2;
 }
+
 #{$small-headings} {
   @extend %type-3;
 }
+
 h4 {
   @extend %size-2;
 }
-h5, h6 {
+
+h5,
+h6 {
   @extend %size-1;
 }
+
 p {
   @extend %type-1;
 }
-.meta, small {
+
+.meta,
+small {
   @extend %type-mod-meta;
 }
 
 label {
   @extend %type-3;
-  &[for], &[for] * {
+
+  &[for],
+  &[for] * {
     cursor: pointer;
   }
 }
+
 fieldset.radio > label {
-  $gutter: 0.5em;
+  $gutter: .5em;
+
   &:not(:first-child) {
     padding-left: $gutter;
     border-left: 1px dotted $white-1;
   }
+
   &:not(:last-child) {
     padding-right: $gutter;
   }
@@ -395,14 +420,17 @@ img[src=''] {
   width: 90%;
   margin: 0 5%;
   position: relative;
+
   @media only screen and (min-width: $screen-size-3) {
     width: 1026px; // 1140px - 10% for margins
     margin: 0 auto;
   }
 }
+
 em {
   @extend %type-mod-em;
 }
+
 .and {
   @extend %type-1;
 }
@@ -410,38 +438,48 @@ em {
 [data-lang] {
   display: none;
 }
+
 [data-lang^='zh'] {
-  font-size: 0.95em;
+  font-size: .95em;
   line-height: 1em;
-  .action &, .trigger &, .stalking & {
+
+  .action &,
+  .trigger &,
+  .stalking & {
     font-size: 1.15em;
   }
+
   .and { font-size: 1em; }
 }
 
-$title-top: $base-lead * 1.5;
 .header-container {
   border-bottom: $ribbon-size solid $blue-1;
+  overflow: visible;
+
+  @media print {
+    border-bottom: 0;
+  }
+
   .title {
     @extend %content-box-1;
     padding: $title-top 0 $base-line;
-    .heading { margin: 0; }
+
     @media only screen and (min-width: $screen-size-2) { // Wider for nav buttons.
       float: left;
     }
+
+    .heading { margin: 0; }
+
     .ie7 & {
       padding-top: $base-lead;
     }
-  }
-  overflow: visible;
-  @media print {
-    border-bottom: 0;
   }
 }
 
 .footer-container,
 .main aside {
   border-top: $ribbon-size solid $blue-1;
+
   @media print {
     border-top: 0;
   }
@@ -462,18 +500,19 @@ $title-top: $base-lead * 1.5;
   @extend %stationery-2;
   $y: 4px;
   $size: 3px;
-  border: {
-    width: 1px 0;
-    style: solid;
-    color: $blue-2;
-  }
+  border: { color: $blue-2; style: solid; width: 1px 0; }
   box-shadow: (
-    inset 0 $y $size -#{$size} $b-7,
-    inset 0 -#{$y} $size -#{$size} $b-7
+    inset 0 $y $size -#{$size} shade(.7),
+    inset 0 -#{$y} $size -#{$size} shade(.7)
   );
-  p, dl, ul, ol {
+
+  p,
+  dl,
+  ul,
+  ol {
     @extend %text-inset-2;
   }
+
   article .heading {
     color: mix($white-1, $black-1, 20%);
     font-family: $font-2-bold;
@@ -493,11 +532,13 @@ $title-top: $base-lead * 1.5;
   font: {
     size: 42px;
   }
+
   &.stalking {
     @extend %control-1;
     @extend %size-2-box;
     @extend %top-tab;
     width: auto !important;
+
     @media only screen and (min-width: $screen-size-1) and (max-width: $screen-size-2) {
       display: none;
     }
@@ -508,17 +549,20 @@ $title-top: $base-lead * 1.5;
   bottom: $base-line;
   position: absolute;
   right: 0;
+
   // Includes additional buffer.
   @media only screen and (max-width: $screen-size-2) {
     bottom: auto;
     top: $title-top + 8px; // Cap and x-height difference.
   }
+
   @media only screen and (max-width: $screen-size-1 + 160px) {
+    font-size: .8em;
     left: 0;
     right: auto;
     top: 5px;
-    font-size: 0.8em;
   }
+
   @media print {
     display: none;
   }
@@ -527,12 +571,15 @@ $title-top: $base-lead * 1.5;
 nav {
   ul {
     margin: 0;
-    padding: 0;
     list-style: none;
+    padding: 0;
   }
-  li, a {
+
+  li,
+  a {
     display: block;
   }
+
   a {
     @extend %control-1;
     @extend %size-2-box;
@@ -541,13 +588,11 @@ nav {
 
     @media only screen and (min-width: $screen-size-1) {
       float: left;
+      margin: { bottom: 0; left: 1.7%; right: 1.7%; }
       width: 31%;
-      margin: {
-        left: 1.7%; right: 1.7%;
-        bottom: 0;
-      }
+
       .oldie nav & {
-        margin: 0 0.7%;
+        margin: 0 .7%;
       }
     }
   }
@@ -555,35 +600,42 @@ nav {
     .trigger {
       display: none;
       position: absolute;
-      top: $base-lead;
       right: $base-lead;
+      top: $base-lead;
+
       @media only screen and (max-width: $screen-size-1) {
        display: block;
       }
     }
   }
+
   @media only screen and (min-width: $screen-size-1) {
     li:first-child > a {
       margin-left: 0;
     }
+
     li:last-child > a {
       margin-right: 0;
     }
+
     .lt-ie8 & li {
       display: inline;
     }
   }
+
   @media only screen and (min-width: $screen-size-1) and (max-width: $screen-size-2) {
     &:not(.stalking) {
       // Tabs.
       height: 60px;
-      padding-top: 4px;
       overflow-y: hidden;
+      padding-top: 4px;
     }
   }
+
   @media only screen and (min-width: $screen-size-2) { // Wider for nav buttons.
     @include sidebar;
   }
+
   @media print {
     display: none;
   }
@@ -603,25 +655,16 @@ a.cloaked {
 
 .main {
   padding: $base-lead 0;
+
   aside {
     @extend %content-box-1;
     @extend %shadow-1;
     @extend %size-2;
-    > .inner {
-      @extend %sheet;
-    }
-    :not(.note):not(em) {
-      font-style: normal;
-    }
-    .detail, .note {
-      @extend %content-box-2;
-      @extend %size-1;
-      @extend %shadow-1;
-      @extend %stationery-5;
-    }
+
     @media only screen and (min-width: $screen-size-2) { // Wider for nav buttons.
       @include sidebar;
     }
+
     @media print {
       border-top: 1px solid;
       border: 0;
@@ -630,22 +673,40 @@ a.cloaked {
       padding-top: 1em;
       padding: 0;
     }
+
+    > .inner {
+      @extend %sheet;
+    }
+
+    :not(.note):not(em) {
+      font-style: normal;
+    }
+
+    .detail, .note {
+      @extend %content-box-2;
+      @extend %shadow-1;
+      @extend %size-1;
+      @extend %stationery-5;
+    }
   }
   address {
     .directions {
       @extend %type-mod-sub;
       display: block;
-      margin: 0.5em 0;
+      margin: .5em 0;
     }
   }
   .more-js .trigger {
-    @extend %type-mod-sub;
     @extend %type-mod-link;
+    @extend %type-mod-sub;
   }
   #{$big-headings} {
     text-transform: lowercase;
   }
-  p, #{$big-headings}, blockquote, figure {
+  #{$big-headings},
+  p,
+  blockquote,
+  figure {
     margin: $base-lead 0;
   }
   @media only screen and (min-width: $screen-size-2) { // Wider for nav buttons.
@@ -658,25 +719,28 @@ a.cloaked {
 
 article {
   @extend %size-2;
+
   figure {
     @extend %shadow-1;
     @extend %stationery-3;
     display: block;
-    img {
-      border: 1px solid $w-2;
-      box-shadow: 0 2px 3px $b-3;
-      width: 100%;
-    }
+
     @media print {
       display: none;
     }
+
+    img {
+      border: 1px solid light(.2);
+      box-shadow: 0 2px 3px shade(.3);
+      width: 100%;
+    }
   }
   figcaption {
-    @extend %type-1;
     @extend %size-1;
-    text-transform: lowercase;
+    @extend %type-1;
     display: block;
     text-align: right;
+    text-transform: lowercase;
   }
   .note {
     @extend %content-box-1;
@@ -686,27 +750,33 @@ article {
   dl {
     @extend %hash-list;
     $w: 25%;
+
     dt {
       width: $w;
+
       @media only screen and (max-width: $screen-size-1) {
         .extra {
           display: none;
         }
       }
     }
+
     dd {
       margin-left: $w;
     }
+
     small:not(.extra) {
       display: block;
       line-height: 1.3em;
     }
+
     &.large dd+dd {
-      margin-top: 0.3em;
+      margin-top: .3em;
     }
+
     &.large dt:not(:first-child) {
       &, &+dd {
-        margin-top: 0.7em;
+        margin-top: .7em;
       }
     }
   }
@@ -715,6 +785,7 @@ article {
     @extend %size-3;
     @extend %stationery-3;
     text-align: center;
+
     @media print {
       .action {
         border: 0;
@@ -723,32 +794,36 @@ article {
       }
     }
   }
+
   .number { // For blocks, not inline.
     font-family: $font-3;
     letter-spacing: 2px;
   }
+
   a.action {
     @extend %control-1;
     @extend %size-2-box;
     display: inline-block;
   }
+
   > :not(:first-child) .heading {
     @extend %top-rule;
   }
+
   .heading.current {
     &::before {
       $arrow-size: 10px;
       $arrow-color: $blue-1;
-      content: "\0020";
-      display: block;
       border: {
-        style: solid;
         color: transparent transparent transparent $arrow-color;
-        width: ($arrow-size * 0.7) 0 ($arrow-size * 0.7) $arrow-size;
+        style: solid;
+        width: ($arrow-size * .7) 0 ($arrow-size * .7) $arrow-size;
       }
-      position: absolute;
+      content: '\0020';
+      display: block;
       margin-left: -($arrow-size * 2);
-      margin-top: 0.3em; // Small-caps difference.
+      margin-top: .3em; // Small-caps difference.
+      position: absolute;
     }
   }
 }
@@ -757,6 +832,7 @@ article {
   color: white;
   padding: $base-lead 0;
 }
+
 #colophon {
   @extend %sheet;
 }
@@ -779,31 +855,38 @@ article {
   @extend %no-doc-flow;
   $w: 100%;
   $h: 300px;
-  &, > iframe, > .curtain {
+
+  &,
+  > .curtain,
+  > iframe {
     width: $w;
     height: $h;
   }
-  iframe {
-    @extend %shadow-1;
-  }
+
   .curtain {
     @extend %shadow-1;
     background: {
       color: $blue-1;
       image: url(#{$_root}/img/map-streetview-screen.jpg);
-      repeat: no-repeat;
       position: center center;
+      repeat: no-repeat;
       size: cover;
     }
+
     figcaption {
-      @extend %control-1;
-      @extend %size-2-box;
       $w: 100px;
       $h: 57px;
-      text-align: center;
+      @extend %control-1;
+      @extend %size-2-box;
       @include centered($w, $h);
+      text-align: center;
     }
   }
+
+  iframe {
+    @extend %shadow-1;
+  }
+
   @media print {
     display: none;
   }
@@ -813,7 +896,7 @@ article {
    Helper classes
    ========================================================================== */
 
-@import "vendor/helpers";
+@import 'vendor/helpers';
 
 
 /* ==========================================================================
@@ -822,6 +905,6 @@ article {
 
 @media print {
 
-  @import "vendor/print";
+  @import 'vendor/print';
 
 }

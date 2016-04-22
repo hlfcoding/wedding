@@ -486,46 +486,71 @@ h1, h2, h3 {
   font-family: "AJensonPro-Regular", serif;
   font-variant: small-caps;
   font-weight: normal;
-  text-transform: lowercase;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  text-transform: lowercase; }
   nav #title.stalking, nav a, nav article a.action, article nav a.action, nav .map .curtain figcaption, .map .curtain nav figcaption, nav h4, nav h5, nav h6, nav label {
     letter-spacing: 0; }
-  #title.stalking .number, nav a .number, article a.action .number, .map .curtain figcaption .number, h4 .number, h5 .number, h6 .number, label .number, #title.stalking .meta, nav a .meta, article a.action .meta, .map .curtain figcaption .meta, h4 .meta, h5 .meta, h6 .meta, label .meta, #title.stalking small, nav a small, article a.action small, .map .curtain figcaption small, h4 small, h5 small, h6 small, label small {
-    font-size: 0.75em; }
+  #title.stalking .number, nav a .number, article a.action .number, .map .curtain figcaption .number, h4 .number, h5 .number, h6 .number, label .number,
+  #title.stalking .meta,
+  nav a .meta,
+  article a.action .meta,
+  .map .curtain figcaption .meta,
+  h4 .meta,
+  h5 .meta,
+  h6 .meta,
+  label .meta,
+  #title.stalking small,
+  nav a small,
+  article a.action small,
+  .map .curtain figcaption small,
+  h4 small,
+  h5 small,
+  h6 small,
+  label small {
+    font-size: .75em; }
 
-.meta, small {
-  opacity: 0.7;
+.meta,
+small {
+  opacity: .7;
   text-transform: lowercase;
-  transition: opacity 0.3s ease-in-out; }
-  .meta h1, small h1, .meta h2, small h2, .meta h3, small h3 {
-    font-size: 0.7em;
+  transition: opacity .3s ease-in-out; }
+  .meta h1,
+  small h1, .meta h2,
+  small h2, .meta h3,
+  small h3 {
+    font-size: .7em;
     font-style: normal; }
-  .meta .meta, small .meta, .meta small, small small {
+  .meta .meta,
+  small .meta,
+  .meta small,
+  small small {
     font-size: 1em; }
-  .selected.meta, small.selected {
+  .selected.meta,
+  small.selected {
     opacity: 1; }
 
 .main address .directions, .main .more-js .trigger {
-  font-size: 0.9em;
-  opacity: 0.7; }
+  font-size: .9em;
+  opacity: .7; }
 
 em {
-  border-bottom-width: 1px;
-  border-bottom-style: dotted; }
+  border-bottom-style: dotted;
+  border-bottom-width: 1px; }
   p em, .and em, article figcaption em {
     font-style: normal; }
 
 a:not(.action):not(.trigger):not(.cloaked), .main .more-js .trigger {
   text-decoration: none; }
   a:not(.action):not(.trigger):not(.cloaked), .main .more-js .trigger {
-    border-bottom-width: 1px;
-    border-bottom-style: dotted; }
+    border-bottom-style: dotted;
+    border-bottom-width: 1px; }
   #html a:hover:not(.action):not(.trigger):not(.cloaked), #html .main .more-js .trigger:hover, .main .more-js #html .trigger:hover {
     border-bottom-style: solid; }
   em a:not(.action):not(.trigger):not(.cloaked), em .main .more-js .trigger, .main .more-js em .trigger {
     border-bottom-style: none; }
 
-h5, h6, .main aside .detail, .main aside .note, article figcaption, article .note {
+h5,
+h6, .main aside .detail, .main aside .note, article figcaption, article .note {
   font-size: 17px;
   line-height: 1.5em;
   padding: 4.5px 9px; }
@@ -547,10 +572,10 @@ article blockquote {
 .header-container,
 .footer-container,
 #html .main aside {
-  color: #FFFFFF;
-  background-color: #0067AC;
-  background-image: url(../img/wave-pattern-inverted.png);
   background-attachment: fixed;
+  background-color: #0067ac;
+  background-image: url(http://pengxwang.s3.amazonaws.com/wedding/img/wave-pattern-inverted.png);
+  color: #ffffff;
   overflow: hidden; }
   .header-container #title,
   .footer-container #title,
@@ -569,8 +594,8 @@ article blockquote {
   .main .more-js .footer-container .trigger,
   #html .main aside .more-js .trigger,
   #html .main .more-js aside .trigger {
-    color: #FFFFFF;
-    border-bottom-color: #FFFFFF; }
+    color: #ffffff;
+    border-bottom-color: #ffffff; }
     .header-container a[href^='tel']:not(.action):not(.trigger):not(.cloaked),
     .footer-container a[href^='tel']:not(.action):not(.trigger):not(.cloaked),
     #html .main aside a[href^='tel']:not(.action):not(.trigger):not(.cloaked), .header-container .main .more-js [href^='tel'].trigger, .main .more-js .header-container [href^='tel'].trigger,
@@ -584,16 +609,16 @@ article blockquote {
     .main .more-js .footer-container .native-bridge.trigger,
     #html .main aside .more-js .native-bridge.trigger,
     #html .main .more-js aside .native-bridge.trigger {
-      border-bottom-color: #56A0D3; }
+      border-bottom-color: #56a0d3; }
   .header-container em,
   .footer-container em,
   #html .main aside em {
-    border-color: #FFFFFF; }
+    border-color: #ffffff; }
 
 body, .main-container {
-  color: #231F20;
-  background-color: #FFFFFF;
-  background-image: url(../img/linen-pattern.png);
+  background-color: #ffffff;
+  background-image: url(http://pengxwang.s3.amazonaws.com/wedding/img/linen-pattern.png);
+  color: #231f20;
   /* For Caslon.
   h1, h2, h3 {
     // Black on white.
@@ -601,44 +626,47 @@ body, .main-container {
   }
   */ }
   body a:not(.action):not(.trigger):not(.cloaked), .main-container a:not(.action):not(.trigger):not(.cloaked), body .main .more-js .trigger, .main .more-js body .trigger, .main-container .main .more-js .trigger, .main .more-js .main-container .trigger {
-    color: #0067AC;
-    border-bottom-color: #0067AC; }
+    border-bottom-color: #0067ac;
+    color: #0067ac; }
     body a[href^='tel:']:not(.action):not(.trigger):not(.cloaked), .main-container a[href^='tel:']:not(.action):not(.trigger):not(.cloaked), body .main .more-js [href^='tel:'].trigger, .main .more-js body [href^='tel:'].trigger, .main-container .main .more-js [href^='tel:'].trigger, .main .more-js .main-container [href^='tel:'].trigger {
-      color: #FFFFFF;
-      border-bottom-color: #FFFFFF; }
+      color: #ffffff;
+      border-bottom-color: #ffffff; }
   body em, .main-container em {
-    border-color: #231F20; }
+    border-color: #231f20; }
 
 article figure, article blockquote {
-  color: #FFFFFF;
-  background-color: #4D4C48;
-  background-image: url(../img/dark-linen-pattern.png); }
+  color: #ffffff;
+  background-color: #4d4c48;
+  background-image: url(http://pengxwang.s3.amazonaws.com/wedding/img/dark-linen-pattern.png); }
 
 article .note {
-  color: #004879;
-  background-color: rgba(86, 160, 211, 0.5); }
+  background-color: rgba(86, 160, 211, 0.5);
+  color: #004879; }
 
 .main aside .detail, .main aside .note {
-  color: #cce3f2;
-  background-color: rgba(0, 71, 140, 0.5); }
+  background-color: rgba(0, 71, 140, 0.5);
+  color: #cce3f2; }
   .main aside .detail em, .main aside .note em {
-    color: #FFFFFF; }
+    color: #ffffff; }
 
-article .note, .main aside .detail, .main aside .note, #title.stalking, nav a, article a.action, .map .curtain figcaption, .main aside, article figure, article blockquote, .map iframe, .map .curtain {
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(0, 0, 0, 0.2); }
+article .note, .main aside .detail, .main aside .note, #title.stalking, nav a, article a.action, .map .curtain figcaption, .main aside, article figure, article blockquote, .map .curtain, .map iframe {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.2); }
 
 .header-container,
 .footer-container,
 #html .main aside, .main aside .detail, .main aside .note, #title.stalking, nav a, article a.action, .map .curtain figcaption {
-  text-shadow: 0 -1px 0 #231F20; }
+  text-shadow: 0 -1px 0 #231f20; }
 
-article .note, .main-container p, .main-container dl, .main-container ul, .main-container ol {
+article .note, .main-container p,
+.main-container dl,
+.main-container ul,
+.main-container ol {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
 
 #title.stalking, nav a, article a.action, .map .curtain figcaption {
   background: rgba(0, 103, 172, 0.7);
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
   display: block;
   font-size: 14px;
@@ -646,10 +674,10 @@ article .note, .main-container p, .main-container dl, .main-container ul, .main-
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  transition: background 0.3s ease-in-out; }
+  transition: background .3s ease-in-out; }
   #title.stalking:hover, nav a:hover, article a.action:hover, .map .curtain figcaption:hover {
-    color: #FFFFFF;
-    background: #00478C; }
+    color: #ffffff;
+    background: #00478c; }
 
 .header-container .title, .main aside, article .note {
   padding: 26px; }
@@ -661,7 +689,8 @@ article .note, .main-container p, .main-container dl, .main-container ul, .main-
 .main aside .detail, .main aside .note {
   padding: 13px; }
 
-article dl dd, article dl dt {
+article dl dd,
+article dl dt {
   vertical-align: middle; }
 article dl dt {
   float: left;
@@ -674,7 +703,7 @@ article dl dd {
 
 article > :not(:first-child) .heading {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 2px 0 -1px #FFFFFF;
+  box-shadow: inset 0 2px 0 -1px #ffffff;
   padding-top: 26px; }
 
 #title.stalking, nav a {
@@ -695,7 +724,7 @@ article > :not(:first-child) .heading {
 body {
   font: 18px/26px DanteMT-Italic, serif;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out; }
+  transition: opacity .3s ease-in-out; }
   body.ready {
     opacity: 1; }
 
@@ -708,7 +737,7 @@ label[for], label[for] * {
 
 fieldset.radio > label:not(:first-child) {
   padding-left: 0.5em;
-  border-left: 1px dotted #FFFFFF; }
+  border-left: 1px dotted #ffffff; }
 fieldset.radio > label:not(:last-child) {
   padding-right: 0.5em; }
 
@@ -733,7 +762,7 @@ img[src=''] {
   display: none; }
 
 [data-lang^='zh'] {
-  font-size: 0.95em;
+  font-size: .95em;
   line-height: 1em; }
   .action [data-lang^='zh'], .trigger [data-lang^='zh'], .stalking [data-lang^='zh'] {
     font-size: 1.15em; }
@@ -741,24 +770,24 @@ img[src=''] {
     font-size: 1em; }
 
 .header-container {
-  border-bottom: 8px solid #0067AC;
+  border-bottom: 8px solid #0067ac;
   overflow: visible; }
-  .header-container .title {
-    padding: 39px 0 18px; }
-    .header-container .title .heading {
-      margin: 0; }
-    @media only screen and (min-width: 1024px) {
-      .header-container .title {
-        float: left; } }
-    .ie7 .header-container .title {
-      padding-top: 26px; }
   @media print {
     .header-container {
       border-bottom: 0; } }
+  .header-container .title {
+    padding: 39px 0 18px; }
+    @media only screen and (min-width: 1024px) {
+      .header-container .title {
+        float: left; } }
+    .header-container .title .heading {
+      margin: 0; }
+    .ie7 .header-container .title {
+      padding-top: 26px; }
 
 .footer-container,
 .main aside {
-  border-top: 8px solid #0067AC; }
+  border-top: 8px solid #0067ac; }
   @media print {
     .footer-container,
     .main aside {
@@ -769,9 +798,9 @@ img[src=''] {
   cursor: default; }
 
 .main-container {
-  border-width: 1px 0;
+  border-color: #56a0d3;
   border-style: solid;
-  border-color: #56A0D3;
+  border-width: 1px 0;
   box-shadow: inset 0 4px 3px -3px rgba(0, 0, 0, 0.7), inset 0 -4px 3px -3px rgba(0, 0, 0, 0.7); }
   .main-container article .heading {
     color: #4f4c4d;
@@ -801,36 +830,37 @@ img[src=''] {
       top: 47px; } }
   @media only screen and (max-width: 640px) {
     #i18n {
+      font-size: .8em;
       left: 0;
       right: auto;
-      top: 5px;
-      font-size: 0.8em; } }
+      top: 5px; } }
   @media print {
     #i18n {
       display: none; } }
 
 nav ul {
   margin: 0;
-  padding: 0;
-  list-style: none; }
-nav li, nav a {
+  list-style: none;
+  padding: 0; }
+nav li,
+nav a {
   display: block; }
 nav a {
   margin-bottom: 10px; }
   @media only screen and (min-width: 480px) {
     nav a {
       float: left;
-      width: 31%;
+      margin-bottom: 0;
       margin-left: 1.7%;
       margin-right: 1.7%;
-      margin-bottom: 0; }
+      width: 31%; }
       .oldie nav nav a {
-        margin: 0 0.7%; } }
+        margin: 0 .7%; } }
 nav.more-js .trigger {
   display: none;
   position: absolute;
-  top: 26px;
-  right: 26px; }
+  right: 26px;
+  top: 26px; }
   @media only screen and (max-width: 480px) {
     nav.more-js .trigger {
       display: block; } }
@@ -844,8 +874,8 @@ nav.more-js .trigger {
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
   nav:not(.stalking) {
     height: 60px;
-    padding-top: 4px;
-    overflow-y: hidden; } }
+    overflow-y: hidden;
+    padding-top: 4px; } }
 @media only screen and (min-width: 1024px) {
   nav {
     float: right;
@@ -863,8 +893,6 @@ a.cloaked {
 
 .main {
   padding: 26px 0; }
-  .main aside :not(.note):not(em) {
-    font-style: normal; }
   @media only screen and (min-width: 1024px) {
     .main aside {
       float: right;
@@ -877,12 +905,17 @@ a.cloaked {
       margin: 0;
       padding-top: 1em;
       padding: 0; } }
+  .main aside :not(.note):not(em) {
+    font-style: normal; }
   .main address .directions {
     display: block;
-    margin: 0.5em 0; }
+    margin: .5em 0; }
   .main h1, .main h2, .main h3 {
     text-transform: lowercase; }
-  .main p, .main h1, .main h2, .main h3, .main blockquote, .main figure {
+  .main h1, .main h2, .main h3,
+  .main p,
+  .main blockquote,
+  .main figure {
     margin: 26px 0; }
   @media only screen and (min-width: 1024px) {
     .main article {
@@ -891,17 +924,17 @@ a.cloaked {
 
 article figure {
   display: block; }
+  @media print {
+    article figure {
+      display: none; } }
   article figure img {
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
     width: 100%; }
-  @media print {
-    article figure {
-      display: none; } }
 article figcaption {
-  text-transform: lowercase;
   display: block;
-  text-align: right; }
+  text-align: right;
+  text-transform: lowercase; }
 article dl dt {
   width: 25%; }
   @media only screen and (max-width: 480px) {
@@ -913,9 +946,9 @@ article dl small:not(.extra) {
   display: block;
   line-height: 1.3em; }
 article dl.large dd + dd {
-  margin-top: 0.3em; }
+  margin-top: .3em; }
 article dl.large dt:not(:first-child), article dl.large dt:not(:first-child) + dd {
-  margin-top: 0.7em; }
+  margin-top: .7em; }
 article blockquote {
   text-align: center; }
   @media print {
@@ -929,14 +962,14 @@ article .number {
 article a.action {
   display: inline-block; }
 article .heading.current::before {
-  content: "\0020";
-  display: block;
+  border-color: transparent transparent transparent #0067ac;
   border-style: solid;
-  border-color: transparent transparent transparent #0067AC;
   border-width: 7px 0 7px 10px;
-  position: absolute;
+  content: '\0020';
+  display: block;
   margin-left: -20px;
-  margin-top: 0.3em; }
+  margin-top: .3em;
+  position: absolute; }
 
 .footer-container footer {
   color: white;
@@ -950,17 +983,18 @@ article .heading.current::before {
 .more-js:not([data-more-custom]) .detail, .more-js:not([data-more-custom]) .less {
   display: none; }
 
-.map, .map > iframe, .map > .curtain {
+.map,
+.map > .curtain,
+.map > iframe {
   width: 100%;
   height: 300px; }
 .map .curtain {
-  background-color: #0067AC;
-  background-image: url(../img/map-streetview-screen.jpg);
-  background-repeat: no-repeat;
+  background-color: #0067ac;
+  background-image: url(http://pengxwang.s3.amazonaws.com/wedding/img/map-streetview-screen.jpg);
   background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover; }
   .map .curtain figcaption {
-    text-align: center;
     display: block;
     position: absolute;
     left: 50%;
@@ -968,7 +1002,8 @@ article .heading.current::before {
     width: 100px;
     top: 50%;
     margin-top: -28.5px;
-    height: 57px; }
+    height: 57px;
+    text-align: center; }
 @media print {
   .map {
     display: none; } }
