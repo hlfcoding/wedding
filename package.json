@@ -19,7 +19,9 @@
     "requirejs": "^2.2.0",
     "underscore": "^1.8.3"
   },
+  "devDependencies": {},
   "scripts": {
-    "postinstall": "source bin/lib.sh"
+    "postinstall": "source bin/lib.sh",
+    "start": "source bin/start.sh"
   }
 }
