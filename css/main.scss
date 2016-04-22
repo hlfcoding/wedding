@@ -378,12 +378,6 @@ img[src=''] {
   display: none;
 }
 
-::-moz-selection {
-  background: transparent;
-  .main-container & {
-    background: $blue-2-l;
-  }
-}
 ::selection {
   background: transparent;
   .main-container & {
