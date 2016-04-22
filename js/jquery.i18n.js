@@ -41,7 +41,7 @@ define(['jquery', 'jquery.mobile.custom', 'jquery.cookie'], function($) {
         _.delay(function() {
           select($menu.find('[value="'+this.lang()+'"]').closest('label'));
         }.bind(this), 300);
-      });
+      }.bind(this));
     },
     lang: function() { return $context.attr('lang'); }
   };
