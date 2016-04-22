@@ -1,7 +1,12 @@
 @import "vendor/normalize";
 @import "vendor/base";
 
+* {
+  box-sizing: border-box;
+}
+
 $_root: 'http://pengxwang.s3.amazonaws.com/wedding';
+$_weight: '#html';
 
 @import "vendor/chrome-helpers";
 
