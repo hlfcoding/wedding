@@ -868,9 +868,7 @@ nav.more-js .trigger {
   nav li:first-child > a {
     margin-left: 0; }
   nav li:last-child > a {
-    margin-right: 0; }
-  .lt-ie8 nav li {
-    display: inline; } }
+    margin-right: 0; } }
 @media only screen and (min-width: 480px) and (max-width: 1024px) {
   nav:not(.stalking) {
     height: 60px;
