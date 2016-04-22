@@ -1,5 +1,5 @@
-define(['jquery', 'jquery.mobile.custom'], function($, jqm) {
-  "use strict";
+define(['jquery', 'jquery.mobile.custom'], function($) {
+  'use strict';
 
   $.more = {
     init: function() {

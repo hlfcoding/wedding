@@ -1,23 +1,9 @@
-define(['jquery', 'jquery.mobile.custom', 'jquery.cookie'], function($, jqm) {
-  "use strict";
+define(['jquery', 'jquery.mobile.custom', 'jquery.cookie'], function($) {
+  'use strict';
+
   var $context = $('html');
-  var is_ready = false;
-  $.fn.i18n = function(persistent){
-    persistent = (persistent != null) ? persistent : true;
-    var $el = this;
-    // Bind to language changes.
-    $context.on('lang.i18n', function(e, lang){
-      $el.find('[data-lang]')
-        .hide()
-        .filter('[data-lang='+lang+']').show();
-      $.cookie('lang', lang);
-      if (!is_ready) {
-        is_ready = true;
-        $el.trigger('ready.i18n');
-      }
-    });
-    return this;
-  };
+  var isReady = false;
+
   $.i18n = {
     init: function() {
       // Initialize.
@@ -27,7 +13,7 @@ define(['jquery', 'jquery.mobile.custom', 'jquery.cookie'], function($, jqm) {
         })
         .i18n();
       this.setupMenu();
-      var lang = $.cookie('lang') || $.i18n.lang();
+      var lang = $.cookie('lang') || this.lang();
       if (lang != null) {
         // Initial language.
         $context.trigger('lang.i18n', [ lang ]);
@@ -53,11 +39,28 @@ define(['jquery', 'jquery.mobile.custom', 'jquery.cookie'], function($, jqm) {
       // Sync with state.
       $context.on('ready.i18n', function(e) {
         _.delay(function() {
-          select($menu.find('[value="'+$.i18n.lang()+'"]').closest('label'));
-        }, 300);
+          select($menu.find('[value="'+this.lang()+'"]').closest('label'));
+        }.bind(this), 300);
       });
     },
     lang: function() { return $context.attr('lang'); }
+  };
+
+  $.fn.i18n = function(persistent){
+    persistent = (persistent != null) ? persistent : true;
+    var $el = this;
+    // Bind to language changes.
+    $context.on('lang.i18n', function(e, lang){
+      $el.find('[data-lang]')
+        .hide()
+        .filter('[data-lang='+lang+']').show();
+      $.cookie('lang', lang);
+      if (!isReady) {
+        isReady = true;
+        $el.trigger('ready.i18n');
+      }
+    });
+    return this;
   };
 
   return $.i18n;

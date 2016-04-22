@@ -1,16 +1,15 @@
 /*global requirejs */
-(function() {
-  "use strict";
-  requirejs.config({
-    baseUrl: 'js/vendor',
-    paths: { app: '..' },
-    shim: {
-      'jquery.scrollTo': { deps: ['jquery'] },
-      'jquery.localScroll': { deps: ['jquery', 'jquery.scrollTo'] },
-      'jquery.stalker': { deps: ['jquery'] },
-    }
-  });
-}());
+
+requirejs.config({
+  baseUrl: 'js/vendor',
+  paths: { app: '../' },
+  shim: {
+    'jquery.scrollTo': { deps: ['jquery'] },
+    'jquery.localScroll': { deps: ['jquery', 'jquery.scrollTo'] },
+    'jquery.stalker': { deps: ['jquery'] },
+  }
+});
+
 define([
   'console',
   'jquery',
@@ -23,9 +22,10 @@ define([
   'app/jquery.more',
   'app/jquery.lazy',
   'app/jquery.i18n',
-  ],
-function(console, $, _, jqm) {
-  "use strict";
+],
+function(console, $, _) {
+  'use strict';
+
   var DEBUG = true;
   var BASE_LEAD = parseInt($('body').css('line-height'), 10);
   var SCREEN_SIZES = {
@@ -34,16 +34,19 @@ function(console, $, _, jqm) {
     3: 1140};
   var MIN_READY_HEIGHT = 2500;
   var ASSET_ROOT = 'http://pengxwang.s3.amazonaws.com/wedding';
+
   if (!DEBUG) {
     $.noConflict();
     _.noConflict();
   }
+
   var $header = $('.header-container');
   var $headings = $('.heading');
   var $nav = $('#nav');
   var $title = $('#title');
-  var screen_size;
+  var screenSize;
   var $page = $('body');
+
   // Setup header.
   $header
     .find('[href], [data-href]').on('vclick', function(e) {
@@ -64,32 +67,34 @@ function(console, $, _, jqm) {
       duration: 400,
       event: 'vclick'
     });
+
   // Setup nav.
   $(window)
     .on('resize', _.debounce(function() {
-      var first_time = screen_size == null;
-      var prev_screen_size = screen_size;
-      var prev_val = 0;
+      var firstTime = screenSize == null;
+      var prevScreenSize = screenSize;
+      var prevVal = 0;
       _.each(SCREEN_SIZES, function(val) {
-        screen_size = Modernizr.mq('only screen and (min-width: '+prev_val+'px) and (max-width: '+val+'px)') ?
-                      val : screen_size;
-        prev_val = val;
+        screenSize = Modernizr.mq('only screen and (min-width: '+prevVal+'px) and (max-width: '+val+'px)') ?
+          val : screenSize;
+        prevVal = val;
       });
-      if (first_time || screen_size !== prev_screen_size) {
+      if (firstTime || screenSize !== prevScreenSize) {
         $(window).trigger('screen-size');
       }
     }, 30))
     .on('screen-size', function() {
-      if (screen_size !== SCREEN_SIZES['1']) {
+      if (screenSize !== SCREEN_SIZES['1']) {
         $nav.add($title).stalker({
           startCallback: function() { $(this).addClass('stalking'); },
           stopCallback: function() { $(this).removeClass('stalking'); }
         });
       }
       // TODO: Support stalker teardown.
-      $nav.more(screen_size !== SCREEN_SIZES['1']);
+      $nav.more(screenSize !== SCREEN_SIZES['1']);
     })
     .trigger('resize');
+
   // Rendering.
   var failures = 0;
   function makeDelayedOnReady() {
@@ -106,6 +111,7 @@ function(console, $, _, jqm) {
   }
   $(window)
     .on('ready.i18n', makeDelayedOnReady());
+  
   // Fill in html.
   $('[data-current-year]').each(function(){
     var $el = $(this);
