@@ -11,7 +11,6 @@ requirejs.config({
 });
 
 define([
-  'console',
   'jquery',
   'underscore',
   'jquery.mobile.custom', // FIXME
@@ -23,7 +22,7 @@ define([
   'app/jquery.lazy',
   'app/jquery.i18n',
 ],
-function(console, $, _) {
+function($, _) {
   'use strict';
 
   var DEBUG = true;
