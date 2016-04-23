@@ -21,6 +21,8 @@
   },
   "devDependencies": {},
   "scripts": {
+    "deploy": "source bin/deploy.sh",
+    "deploy:server_side": "source bin/deploy.sh -s",
     "postinstall": "source bin/lib.sh",
     "start": "source bin/start.sh"
   }
