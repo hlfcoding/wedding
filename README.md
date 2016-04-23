@@ -10,6 +10,8 @@
 ```bash
 $ npm install
 $ npm start # 'gem install -N sass' if needed
+$ npm deploy # see docs.aws.amazon.com/cli/latest/userguide/installing.html if needed
+$ npm deploy:server_side # run on server
 ```
 
 ## License

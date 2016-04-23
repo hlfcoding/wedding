@@ -16,7 +16,6 @@ if [ "$server_side" = true ]; then
   exit 0
 fi
 
-# http://docs.aws.amazon.com/cli/latest/userguide/installing.html
 command -v aws >/dev/null 2>&1 || { echo 'aws not installed'; exit 1; }
 
 s3_root=s3://pengxwang/wedding
