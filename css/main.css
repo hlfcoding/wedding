@@ -445,26 +445,26 @@ textarea {
 
 @font-face {
   font-family: "DanteMT-Italic";
-  src: url("http://pengxwang.s3.amazonaws.com/wedding/fonts/dantemtitalic.eot");
-  src: url("http://pengxwang.s3.amazonaws.com/wedding/fonts/dantemtitalic.eot?#iefix") format("embedded-opentype"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/dantemtitalic.woff") format("woff"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/dantemtitalic.ttf") format("truetype"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/dantemtitalic.svg#file_name") format("svg");
+  src: url("//pengxwang.s3.amazonaws.com/wedding/fonts/dantemtitalic.eot");
+  src: url("//pengxwang.s3.amazonaws.com/wedding/fonts/dantemtitalic.eot?#iefix") format("embedded-opentype"), url("//pengxwang.s3.amazonaws.com/wedding/fonts/dantemtitalic.woff") format("woff"), url("//pengxwang.s3.amazonaws.com/wedding/fonts/dantemtitalic.ttf") format("truetype"), url("//pengxwang.s3.amazonaws.com/wedding/fonts/dantemtitalic.svg#file_name") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: "CaslonTwoTwentyFourLT-Book";
-  src: url("http://pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbook.eot");
-  src: url("http://pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbook.eot?#iefix") format("embedded-opentype"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbook.woff") format("woff"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbook.ttf") format("truetype"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbook.svg#file_name") format("svg");
+  src: url("//pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbook.eot");
+  src: url("//pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbook.eot?#iefix") format("embedded-opentype"), url("//pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbook.woff") format("woff"), url("//pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbook.ttf") format("truetype"), url("//pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbook.svg#file_name") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: "CaslonTwoTwentyFourLT-Bold";
-  src: url("http://pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbold.eot");
-  src: url("http://pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbold.eot?#iefix") format("embedded-opentype"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbold.woff") format("woff"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbold.ttf") format("truetype"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbold.svg#file_name") format("svg");
+  src: url("//pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbold.eot");
+  src: url("//pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbold.eot?#iefix") format("embedded-opentype"), url("//pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbold.woff") format("woff"), url("//pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbold.ttf") format("truetype"), url("//pengxwang.s3.amazonaws.com/wedding/fonts/itccaslon224ltbold.svg#file_name") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: "AJensonPro-Regular";
-  src: url("http://pengxwang.s3.amazonaws.com/wedding/fonts/ajensonproregular.eot");
-  src: url("http://pengxwang.s3.amazonaws.com/wedding/fonts/ajensonproregular.eot?#iefix") format("embedded-opentype"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/ajensonproregular.woff") format("woff"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/ajensonproregular.ttf") format("truetype"), url("http://pengxwang.s3.amazonaws.com/wedding/fonts/ajensonproregular.svg#file_name") format("svg");
+  src: url("//pengxwang.s3.amazonaws.com/wedding/fonts/ajensonproregular.eot");
+  src: url("//pengxwang.s3.amazonaws.com/wedding/fonts/ajensonproregular.eot?#iefix") format("embedded-opentype"), url("//pengxwang.s3.amazonaws.com/wedding/fonts/ajensonproregular.woff") format("woff"), url("//pengxwang.s3.amazonaws.com/wedding/fonts/ajensonproregular.ttf") format("truetype"), url("//pengxwang.s3.amazonaws.com/wedding/fonts/ajensonproregular.svg#file_name") format("svg");
   font-weight: normal;
   font-style: normal; }
 /* ==============
@@ -574,7 +574,7 @@ article blockquote {
 #html .main aside {
   background-attachment: fixed;
   background-color: #0067ac;
-  background-image: url(http://pengxwang.s3.amazonaws.com/wedding/img/wave-pattern-inverted.png);
+  background-image: url(//pengxwang.s3.amazonaws.com/wedding/img/wave-pattern-inverted.png);
   color: #ffffff;
   overflow: hidden; }
   .header-container #title,
@@ -617,7 +617,7 @@ article blockquote {
 
 body, .main-container {
   background-color: #ffffff;
-  background-image: url(http://pengxwang.s3.amazonaws.com/wedding/img/linen-pattern.png);
+  background-image: url(//pengxwang.s3.amazonaws.com/wedding/img/linen-pattern.png);
   color: #231f20;
   /* For Caslon.
   h1, h2, h3 {
@@ -637,7 +637,7 @@ body, .main-container {
 article figure, article blockquote {
   color: #ffffff;
   background-color: #4d4c48;
-  background-image: url(http://pengxwang.s3.amazonaws.com/wedding/img/dark-linen-pattern.png); }
+  background-image: url(//pengxwang.s3.amazonaws.com/wedding/img/dark-linen-pattern.png); }
 
 article .note {
   background-color: rgba(86, 160, 211, 0.5);
@@ -988,7 +988,7 @@ article .heading.current::before {
   height: 300px; }
 .map .curtain {
   background-color: #0067ac;
-  background-image: url(http://pengxwang.s3.amazonaws.com/wedding/img/map-streetview-screen.jpg);
+  background-image: url(//pengxwang.s3.amazonaws.com/wedding/img/map-streetview-screen.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover; }

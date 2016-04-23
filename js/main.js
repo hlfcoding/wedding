@@ -30,9 +30,10 @@ function($, _) {
   var SCREEN_SIZES = {
     1: 480,
     2: 1024,
-    3: 1140};
+    3: 1140
+  };
   var MIN_READY_HEIGHT = 2500;
-  var ASSET_ROOT = 'http://pengxwang.s3.amazonaws.com/wedding';
+  var ASSET_ROOT = '//pengxwang.s3.amazonaws.com/wedding';
 
   if (!DEBUG) {
     $.noConflict();
