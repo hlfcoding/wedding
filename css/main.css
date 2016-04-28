@@ -467,12 +467,6 @@ textarea {
   src: url("//pengxwang.s3.amazonaws.com/wedding/fonts/ajensonproregular.eot?#iefix") format("embedded-opentype"), url("//pengxwang.s3.amazonaws.com/wedding/fonts/ajensonproregular.woff") format("woff"), url("//pengxwang.s3.amazonaws.com/wedding/fonts/ajensonproregular.ttf") format("truetype"), url("//pengxwang.s3.amazonaws.com/wedding/fonts/ajensonproregular.svg#file_name") format("svg");
   font-weight: normal;
   font-style: normal; }
-/* ==============
-   Skin
-   ============== */
-/* ==============
-   Patterns
-   ============== */
 p, .and, article figcaption {
   font-family: "DanteMT-Italic", serif;
   font-weight: normal; }
@@ -540,17 +534,17 @@ em {
     font-style: normal; }
 
 a:not(.action):not(.trigger):not(.cloaked), .main .more-js .trigger {
+  border-bottom-style: dotted;
+  border-bottom-width: 1px;
   text-decoration: none; }
-  a:not(.action):not(.trigger):not(.cloaked), .main .more-js .trigger {
-    border-bottom-style: dotted;
-    border-bottom-width: 1px; }
   #html a:hover:not(.action):not(.trigger):not(.cloaked), #html .main .more-js .trigger:hover, .main .more-js #html .trigger:hover {
     border-bottom-style: solid; }
   em a:not(.action):not(.trigger):not(.cloaked), em .main .more-js .trigger, .main .more-js em .trigger {
     border-bottom-style: none; }
 
 h5,
-h6, .main aside .detail, .main aside .note, article figcaption, article .note {
+h6, .main aside .detail,
+.main aside .note, article figcaption, article .note {
   font-size: 17px;
   line-height: 1.5em;
   padding: 4.5px 9px; }
@@ -575,7 +569,7 @@ article blockquote {
   background-attachment: fixed;
   background-color: #0067ac;
   background-image: url(//pengxwang.s3.amazonaws.com/wedding/img/wave-pattern-inverted.png);
-  color: #ffffff;
+  color: #fff;
   overflow: hidden; }
   .header-container #title,
   .footer-container #title,
@@ -594,8 +588,8 @@ article blockquote {
   .main .more-js .footer-container .trigger,
   #html .main aside .more-js .trigger,
   #html .main .more-js aside .trigger {
-    color: #ffffff;
-    border-bottom-color: #ffffff; }
+    border-bottom-color: #fff;
+    color: #fff; }
     .header-container a[href^='tel']:not(.action):not(.trigger):not(.cloaked),
     .footer-container a[href^='tel']:not(.action):not(.trigger):not(.cloaked),
     #html .main aside a[href^='tel']:not(.action):not(.trigger):not(.cloaked), .header-container .main .more-js [href^='tel'].trigger, .main .more-js .header-container [href^='tel'].trigger,
@@ -613,49 +607,47 @@ article blockquote {
   .header-container em,
   .footer-container em,
   #html .main aside em {
-    border-color: #ffffff; }
+    border-color: #fff; }
 
 body, .main-container {
-  background-color: #ffffff;
+  background-color: #fff;
   background-image: url(//pengxwang.s3.amazonaws.com/wedding/img/linen-pattern.png);
-  color: #231f20;
-  /* For Caslon.
-  h1, h2, h3 {
-    // Black on white.
-    font-weight: bold;
-  }
-  */ }
+  color: #231f20; }
   body a:not(.action):not(.trigger):not(.cloaked), .main-container a:not(.action):not(.trigger):not(.cloaked), body .main .more-js .trigger, .main .more-js body .trigger, .main-container .main .more-js .trigger, .main .more-js .main-container .trigger {
     border-bottom-color: #0067ac;
     color: #0067ac; }
     body a[href^='tel:']:not(.action):not(.trigger):not(.cloaked), .main-container a[href^='tel:']:not(.action):not(.trigger):not(.cloaked), body .main .more-js [href^='tel:'].trigger, .main .more-js body [href^='tel:'].trigger, .main-container .main .more-js [href^='tel:'].trigger, .main .more-js .main-container [href^='tel:'].trigger {
-      color: #ffffff;
-      border-bottom-color: #ffffff; }
+      border-bottom-color: #fff;
+      color: #fff; }
   body em, .main-container em {
     border-color: #231f20; }
 
 article figure, article blockquote {
-  color: #ffffff;
   background-color: #4d4c48;
-  background-image: url(//pengxwang.s3.amazonaws.com/wedding/img/dark-linen-pattern.png); }
+  background-image: url(//pengxwang.s3.amazonaws.com/wedding/img/dark-linen-pattern.png);
+  color: #fff; }
 
 article .note {
   background-color: rgba(86, 160, 211, 0.5);
   color: #004879; }
 
-.main aside .detail, .main aside .note {
+.main aside .detail,
+.main aside .note {
   background-color: rgba(0, 71, 140, 0.5);
   color: #cce3f2; }
-  .main aside .detail em, .main aside .note em {
-    color: #ffffff; }
+  .main aside .detail em,
+  .main aside .note em {
+    color: #fff; }
 
-article .note, .main aside .detail, .main aside .note, #title.stalking, nav a, article a.action, .map .curtain figcaption, .main aside, article figure, article blockquote, .map .curtain, .map iframe {
+article .note, .main aside .detail,
+.main aside .note, #title.stalking, nav a, article a.action, .map .curtain figcaption, .main aside, article figure, article blockquote, .map .curtain, .map iframe {
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.2); }
 
 .header-container,
 .footer-container,
-#html .main aside, .main aside .detail, .main aside .note, #title.stalking, nav a, article a.action, .map .curtain figcaption {
+#html .main aside, .main aside .detail,
+.main aside .note, #title.stalking, nav a, article a.action, .map .curtain figcaption {
   text-shadow: 0 -1px 0 #231f20; }
 
 article .note, .main-container p,
@@ -666,7 +658,7 @@ article .note, .main-container p,
 
 #title.stalking, nav a, article a.action, .map .curtain figcaption {
   background: rgba(0, 103, 172, 0.7);
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
   display: block;
   font-size: 14px;
@@ -676,7 +668,7 @@ article .note, .main-container p,
   text-transform: uppercase;
   transition: background .3s ease-in-out; }
   #title.stalking:hover, nav a:hover, article a.action:hover, .map .curtain figcaption:hover {
-    color: #ffffff;
+    color: #fff;
     background: #00478c; }
 
 .header-container .title, .main aside, article .note {
@@ -686,29 +678,32 @@ article .note, .main-container p,
   .header-container .title :last-child, .main aside :last-child, article .note :last-child {
     margin-bottom: 0; }
 
-.main aside .detail, .main aside .note {
+.main aside .detail,
+.main aside .note {
   padding: 13px; }
 
 article dl dd,
 article dl dt {
   vertical-align: middle; }
 article dl dt {
+  clear: left;
   float: left;
-  padding-right: 18px;
   margin: 0;
-  clear: left; }
+  padding-right: 18px; }
 article dl dd {
-  display: block;
-  clear: right; }
+  clear: right;
+  display: block; }
 
 article > :not(:first-child) .heading {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 2px 0 -1px #ffffff;
+  box-shadow: inset 0 2px 0 -1px #fff;
   padding-top: 26px; }
 
 #title.stalking, nav a {
   margin-top: -1px; }
-  nav article a.note, article nav a.note, nav .main aside a.detail, .main aside nav a.detail, nav .main aside a.note, .main aside nav a.note, #title.stalking, nav a, article nav a.action, nav article a.action, nav .map a.curtain, .map nav a.curtain {
+  nav article a.note, article nav a.note, nav .main aside a.detail, .main aside nav a.detail,
+  nav .main aside a.note,
+  .main aside nav a.note, #title.stalking, nav a, article nav a.action, nav article a.action, nav .map a.curtain, .map nav a.curtain {
     margin-top: -2px; }
 
 .map {
@@ -718,9 +713,6 @@ article > :not(:first-child) .heading {
     display: block;
     position: absolute; }
 
-/* ==============
-   General
-   ============== */
 body {
   font: 18px/26px DanteMT-Italic, serif;
   opacity: 0;
@@ -736,8 +728,8 @@ label[for], label[for] * {
   cursor: pointer; }
 
 fieldset.radio > label:not(:first-child) {
-  padding-left: 0.5em;
-  border-left: 1px dotted #ffffff; }
+  border-left: 1px dotted #fff;
+  padding-left: 0.5em; }
 fieldset.radio > label:not(:last-child) {
   padding-right: 0.5em; }
 
@@ -750,13 +742,13 @@ img[src=''] {
     background: #cce3f2; }
 
 .wrapper {
-  width: 90%;
   margin: 0 5%;
-  position: relative; }
+  position: relative;
+  width: 90%; }
   @media only screen and (min-width: 1140px) {
     .wrapper {
-      width: 1026px;
-      margin: 0 auto; } }
+      margin: 0 auto;
+      width: 1026px; } }
 
 [data-lang] {
   display: none; }
@@ -809,9 +801,6 @@ img[src=''] {
 .main aside:first-of-type {
   margin-top: 26px; }
 
-/* ==============
-   Header
-   ============== */
 #title {
   font-size: 42px; }
   #title.stalking {
@@ -882,9 +871,6 @@ nav.more-js .trigger {
   nav {
     display: none; } }
 
-/* ==============
-   Main
-   ============== */
 a.cloaked {
   color: inherit;
   text-decoration: inherit; }
@@ -897,12 +883,12 @@ a.cloaked {
       width: 37%; } }
   @media print {
     .main aside {
-      border-top: 1px solid;
       border: 0;
-      margin-top: 1em;
+      border-top: 1px solid;
       margin: 0;
-      padding-top: 1em;
-      padding: 0; } }
+      margin-top: 1em;
+      padding: 0;
+      padding-top: 1em; } }
   .main aside :not(.note):not(em) {
     font-style: normal; }
   .main address .directions {
@@ -970,22 +956,20 @@ article .heading.current::before {
   position: absolute; }
 
 .footer-container footer {
-  color: white;
+  color: #fff;
   padding: 26px 0; }
 
-/* ==============
-   Components
-   ============== */
 .more-js .trigger {
   display: inline-block; }
-.more-js:not([data-more-custom]) .detail, .more-js:not([data-more-custom]) .less {
+.more-js:not([data-more-custom]) .detail,
+.more-js:not([data-more-custom]) .less {
   display: none; }
 
 .map,
 .map > .curtain,
 .map > iframe {
-  width: 100%;
-  height: 300px; }
+  height: 300px;
+  width: 100%; }
 .map .curtain {
   background-color: #0067ac;
   background-image: url(//pengxwang.s3.amazonaws.com/wedding/img/map-streetview-screen.jpg);
@@ -1006,9 +990,6 @@ article .heading.current::before {
   .map {
     display: none; } }
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 /*
  * Image replacement
@@ -1093,9 +1074,6 @@ article .heading.current::before {
 .clearfix {
   *zoom: 1; }
 
-/* ==========================================================================
-   Print styles
-   ========================================================================== */
 @media print {
   /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
   * {

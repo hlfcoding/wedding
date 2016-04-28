@@ -16,11 +16,9 @@ $_weight: '#html';
 @include font-face(CaslonTwoTwentyFourLT-Bold, itccaslon224ltbold, #{$_root}/fonts);
 @include font-face(AJensonPro-Regular, ajensonproregular, #{$_root}/fonts);
 
-/* ==============
-   Skin
-   ============== */
+// section: skin
 
-$white-1: #ffffff;
+$white-1: #fff;
 $black-1: #231f20;
 $gray-1: #4d4c48;
 $blue-1: #0067ac;
@@ -45,9 +43,7 @@ $screen-size-1: 480px;
 $screen-size-2: 1024px;
 $screen-size-3: 1140px;
 
-/* ==============
-   Patterns
-   ============== */
+// section: patterns
 
 %type-1 {
   font: { family: $font-1; weight: normal; }
@@ -104,11 +100,8 @@ $screen-size-3: 1140px;
 }
 
 %type-mod-link {
+  border-bottom: { style: dotted; width: 1px; }
   text-decoration: none;
-
-  & {
-    border-bottom: { style: dotted; width: 1px; }
-  }
 
   #{$_weight} &:hover {
     border-bottom-style: solid;
@@ -168,8 +161,8 @@ $screen-size-3: 1140px;
 
   %type-mod-link {
     $clr: $white-1;
-    color: $clr;
     border-bottom-color: $clr;
+    color: $clr;
 
     &[href^='tel'],
     &.native-bridge {
@@ -189,12 +182,11 @@ $screen-size-3: 1140px;
   }
   color: $black-1;
 
-  /* For Caslon.
-  #{$big-headings} {
+  // For Caslon.
+  // #{$big-headings} {
     // Black on white.
-    font-weight: bold;
-  }
-  */
+    // font-weight: bold;
+  // }
 
   %type-mod-link {
     $clr: $blue-1;
@@ -203,8 +195,8 @@ $screen-size-3: 1140px;
     color: $clr;
 
     &[href^='tel:'] {
-      color: $meta-clr;
       border-bottom-color: $meta-clr;
+      color: $meta-clr;
     }
   }
 
@@ -214,11 +206,11 @@ $screen-size-3: 1140px;
 }
 
 %stationery-3 {
-  color: $white-1;
   background: {
     color: $gray-1;
     image: url(#{$_root}/img/dark-linen-pattern.png);
   }
+  color: $white-1;
 }
 
 %stationery-4 {
@@ -295,15 +287,15 @@ $screen-size-3: 1140px;
   dt { vertical-align: middle; }
 
   dt {
-    float: left;
-    padding-right: $base-line;
-    margin: 0;
     clear: left;
+    float: left;
+    margin: 0;
+    padding-right: $base-line;
   }
 
   dd {
-    display: block;
     clear: right;
+    display: block;
   }
 }
 
@@ -337,9 +329,7 @@ $screen-size-3: 1140px;
   width: $side-col-size;
 }
 
-/* ==============
-   General
-   ============== */
+// section: general
 
 body {
   @extend %stationery-2;
@@ -396,8 +386,8 @@ fieldset.radio > label {
   $gutter: .5em;
 
   &:not(:first-child) {
-    padding-left: $gutter;
     border-left: 1px dotted $white-1;
+    padding-left: $gutter;
   }
 
   &:not(:last-child) {
@@ -411,19 +401,20 @@ img[src=''] {
 
 ::selection {
   background: transparent;
+
   .main-container & {
     background: $blue-2-l;
   }
 }
 
 .wrapper {
-  width: 90%;
   margin: 0 5%;
   position: relative;
+  width: 90%;
 
   @media only screen and (min-width: $screen-size-3) {
-    width: 1026px; // 1140px - 10% for margins
     margin: 0 auto;
+    width: 1026px; // 1140px - 10% for margins
   }
 }
 
@@ -523,9 +514,7 @@ em {
   margin-top: $base-lead; // Align.
 }
 
-/* ==============
-   Header
-   ============== */
+// section: header
 
 #title {
   @extend %sheet;
@@ -596,6 +585,7 @@ nav {
       }
     }
   }
+
   &.more-js {
     .trigger {
       display: none;
@@ -604,7 +594,7 @@ nav {
       top: $base-lead;
 
       @media only screen and (max-width: $screen-size-1) {
-       display: block;
+        display: block;
       }
     }
   }
@@ -637,9 +627,7 @@ nav {
   }
 }
 
-/* ==============
-   Main
-   ============== */
+// section: main
 
 a:not(.action):not(.trigger):not(.cloaked) {
   @extend %type-mod-link;
@@ -662,12 +650,12 @@ a.cloaked {
     }
 
     @media print {
-      border-top: 1px solid;
       border: 0;
-      margin-top: 1em;
+      border-top: 1px solid;
       margin: 0;
-      padding-top: 1em;
+      margin-top: 1em;
       padding: 0;
+      padding-top: 1em;
     }
 
     > .inner {
@@ -678,13 +666,15 @@ a.cloaked {
       font-style: normal;
     }
 
-    .detail, .note {
+    .detail,
+    .note {
       @extend %content-box-2;
       @extend %shadow-1;
       @extend %size-1;
       @extend %stationery-5;
     }
   }
+
   address {
     .directions {
       @extend %type-mod-sub;
@@ -692,19 +682,23 @@ a.cloaked {
       margin: .5em 0;
     }
   }
+
   .more-js .trigger {
     @extend %type-mod-link;
     @extend %type-mod-sub;
   }
+
   #{$big-headings} {
     text-transform: lowercase;
   }
+
   #{$big-headings},
   p,
   blockquote,
   figure {
     margin: $base-lead 0;
   }
+
   @media only screen and (min-width: $screen-size-2) { // Wider for nav buttons.
     article {
       float: left;
@@ -731,6 +725,7 @@ article {
       width: 100%;
     }
   }
+
   figcaption {
     @extend %size-1;
     @extend %type-1;
@@ -738,11 +733,13 @@ article {
     text-align: right;
     text-transform: lowercase;
   }
+
   .note {
     @extend %content-box-1;
     @extend %size-1;
     @extend %stationery-4;
   }
+
   dl {
     @extend %hash-list;
     $w: 25%;
@@ -771,11 +768,13 @@ article {
     }
 
     &.large dt:not(:first-child) {
-      &, &+dd {
+      &,
+      &+dd {
         margin-top: .7em;
       }
     }
   }
+
   blockquote {
     @extend %shadow-1;
     @extend %size-3;
@@ -825,7 +824,7 @@ article {
 }
 
 .footer-container footer {
-  color: white;
+  color: $white-1;
   padding: $base-lead 0;
 }
 
@@ -833,20 +832,21 @@ article {
   @extend %sheet;
 }
 
-/* ==============
-   Components
-   ============== */
+// section: components
 
 .more-js {
   .trigger {
     display: inline-block;
   }
+
   &:not([data-more-custom]) {
-    .detail, .less {
+    .detail,
+    .less {
       display: none;
     }
   }
 }
+
 .map {
   @extend %no-doc-flow;
   $w: 100%;
@@ -855,8 +855,8 @@ article {
   &,
   > .curtain,
   > iframe {
-    width: $w;
     height: $h;
+    width: $w;
   }
 
   .curtain {
@@ -888,16 +888,7 @@ article {
   }
 }
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
 @import 'vendor/helpers';
-
-
-/* ==========================================================================
-   Print styles
-   ========================================================================== */
 
 @media print {
 

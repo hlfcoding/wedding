@@ -6,7 +6,7 @@ requirejs.config({
   shim: {
     'jquery.scrollTo': { deps: ['jquery'] },
     'jquery.localScroll': { deps: ['jquery', 'jquery.scrollTo'] },
-    'jquery.stalker': { deps: ['jquery'] },
+    'jquery.stalker': { deps: ['jquery'] }
   }
 });
 
@@ -20,7 +20,7 @@ define([
   'jquery.stalker',
   'app/jquery.more',
   'app/jquery.lazy',
-  'app/jquery.i18n',
+  'app/jquery.i18n'
 ],
 function($, _) {
   'use strict';

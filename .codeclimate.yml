@@ -11,3 +11,4 @@ ratings:
   - "css/main.scss"
 exclude_paths:
 - "*/vendor/*"
+- "css/main.css"
