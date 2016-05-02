@@ -1,7 +1,7 @@
 # Wedding
 
-[![Dependency Status](https://david-dm.org/hlfcoding/wedding/status.svg)](https://david-dm.org/hlfcoding/wedding#info=dependencies)
 [![Code Climate](https://codeclimate.com/github/hlfcoding/wedding/badges/gpa.svg)](https://codeclimate.com/github/hlfcoding/wedding)
+[![Dependency Status](https://david-dm.org/hlfcoding/wedding/status.svg)](https://david-dm.org/hlfcoding/wedding#info=dependencies)
 
 > :wedding: Responsive HTML5 mini-site from scratch. http://wedding.pengxwang.com
 
