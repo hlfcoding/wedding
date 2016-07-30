@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "hlf-css": "^0.2.4",
-    "jquery": "^2.2.3",
+    "jquery": "^3.1.0",
     "jquery.cookie": "^1.4.1",
     "jquery.localscroll": "^1.4.0",
     "jquery.scrollto": "^2.1.2",

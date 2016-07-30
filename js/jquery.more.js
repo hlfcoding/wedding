@@ -1,4 +1,4 @@
-define(['jquery', 'jquery.mobile.custom'], function($) {
+define(['jquery'], function($) {
   'use strict';
 
   $.more = {
@@ -21,7 +21,7 @@ define(['jquery', 'jquery.mobile.custom'], function($) {
         $moreText.toggle(!on);
         $detail.add($lessText).toggle(on);
       };
-      $trigger.on('vclick', function(e) {
+      $trigger.on('click', function(e) {
         $el.data('on', !$el.data('on'));
         api.toggle($el.data('on'));
         e.preventDefault();

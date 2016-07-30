@@ -1,4 +1,4 @@
-define(['jquery', 'jquery.mobile.custom', 'app/jquery.i18n'], function($) {
+define(['jquery', 'app/jquery.i18n'], function($) {
   'use strict';
 
   $.lazy = {
@@ -29,7 +29,7 @@ define(['jquery', 'jquery.mobile.custom', 'app/jquery.i18n'], function($) {
           }
         };
       }
-      $trigger.one('vclick', function() {
+      $trigger.one('click', function() {
         load();
         didLoad = true;
         $curtain.fadeOut(function() {

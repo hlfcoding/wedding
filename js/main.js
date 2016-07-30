@@ -13,7 +13,6 @@ requirejs.config({
 define([
   'jquery',
   'underscore',
-  'jquery.mobile.custom', // FIXME
   // Only non-exports after this point.
   'jquery.scrollTo',
   'jquery.localScroll',
@@ -49,7 +48,13 @@ function($, _) {
 
   // Setup header.
   $header
-    .find('[href], [data-href]').on('vclick', function(e) {
+    .localScroll({
+      duration: 400,
+      event: 'click'
+    })
+    .find('[href], [data-href]')
+    .not('[href="#"]')
+    .on('click', function(e) {
       var href = $(this).attr('href') || $(this).data('href');
       var $heading = $(href);
       // TODO: Reinstate.
@@ -62,10 +67,6 @@ function($, _) {
       $headings.removeClass('current');
       $heading.addClass('current');
       e.preventDefault();
-    }).end()
-    .localScroll({
-      duration: 400,
-      event: 'vclick'
     });
 
   // Setup nav.
@@ -111,7 +112,7 @@ function($, _) {
   }
   $(window)
     .on('ready.i18n', makeDelayedOnReady());
-  
+
   // Fill in html.
   $('[data-current-year]').each(function(){
     var $el = $(this);
@@ -125,7 +126,7 @@ function($, _) {
   $('img[data-src]').each(function(){
     var $img = $(this);
     $img
-      .load(function() { $img.show(); })
+      .on('load', function() { $img.show(); })
       .attr('src', ASSET_ROOT+'/'+$img.data('src'));
   });
   $('a[data-webcal]').each(function(){

@@ -1,4 +1,4 @@
-define(['jquery', 'jquery.mobile.custom', 'jquery.cookie'], function($) {
+define(['jquery', 'jquery.cookie'], function($) {
   'use strict';
 
   var $context = $('html');
@@ -32,7 +32,7 @@ define(['jquery', 'jquery.mobile.custom', 'jquery.cookie'], function($) {
           .find(':radio').attr('checked', true);
         return $label;
       }
-      $labels.on('vclick', function() {
+      $labels.on('click', function() {
         var $label = $(this);
         select($label).trigger('lang.i18n', [ $label.find('input').val() ]);
       });
