@@ -12,7 +12,7 @@ while getopts ':s' opt; do
 done
 
 if [ "$server_side" = true ]; then
-  rm -f {fonts,img}/*
+  rm -rf {fonts,img,node_modules}/*
   exit 0
 fi
 
