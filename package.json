@@ -1,7 +1,7 @@
 {
   "name": "wedding",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Responsive HTML5 mini-site from scratch. http://wedding.pengxwang.com",
   "main": "index.html",
   "author": "Peng Wang <peng@pengxwang.com>",
